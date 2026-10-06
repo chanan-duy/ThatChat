@@ -1,0 +1,1399 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile>
+  <diagram id="class-diagram" name="Диаграмма классов">
+    <mxGraphModel grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="3620" pageHeight="2890" math="0" shadow="0" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c1" value="ThatChat. Диаграмма классов" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=34;fontColor=#202020;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="45" y="35" width="3300" height="48" />
+        </mxCell>
+        <mxCell id="c2" value="Серверная часть программы обмена сообщениями. Типы сгруппированы по назначению." style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=20;fontColor=#202020;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="45" y="96" width="3300" height="32" />
+        </mxCell>
+        <mxCell id="c4" value="" style="rounded=0;fillColor=#FFFFFF;strokeColor=#B6BBC0;strokeWidth=1;locked=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40.0" y="180.0" width="1420" height="1500" />
+        </mxCell>
+        <mxCell id="c5" value="1. Данные и хранение" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=25;fontColor=#202020;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="64.0" y="200.0" width="1372" height="42" />
+        </mxCell>
+        <mxCell id="class-data-ent0002" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="415.0" y="412.0" width="560.0889" height="262.5234" />
+        </mxCell>
+        <mxCell id="c7" value="" style="rounded=0;fillColor=#F3F4F5;strokeColor=none;part=1;" vertex="1" parent="class-data-ent0002">
+          <mxGeometry as="geometry" x="1" y="1" width="558.0889" height="42.7891" />
+        </mxCell>
+        <mxCell id="c8" value="AppDbContext" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=1;part=1;" vertex="1" parent="class-data-ent0002">
+          <mxGeometry as="geometry" x="210.6541" y="9.9298" width="142.7808" height="22.95" />
+        </mxCell>
+        <mxCell id="c9" value="+GlobalChatId: Guid {readOnly}" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=4;part=1;" vertex="1" parent="class-data-ent0002">
+          <mxGeometry as="geometry" x="13.0" y="52.7188" width="283.23" height="22.95" />
+        </mxCell>
+        <mxCell id="c10" value="+Chats: DbSet&lt;ChatEnt&gt;" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-data-ent0002">
+          <mxGeometry as="geometry" x="13.0" y="86.5079" width="226.1538" height="22.95" />
+        </mxCell>
+        <mxCell id="c11" value="+Messages: DbSet&lt;MessageEnt&gt;" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-data-ent0002">
+          <mxGeometry as="geometry" x="13.0" y="120.297" width="295.7144" height="22.95" />
+        </mxCell>
+        <mxCell id="c12" value="+ChatUsers: DbSet&lt;ChatUserEnt&gt;" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-data-ent0002">
+          <mxGeometry as="geometry" x="13.0" y="154.086" width="303.6499" height="22.95" />
+        </mxCell>
+        <mxCell id="c13" value="+AppDbContext(options: DbContextOptions&lt;AppDbContext&gt;)" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-data-ent0002">
+          <mxGeometry as="geometry" x="13.0" y="195.8751" width="538.0889" height="22.95" />
+        </mxCell>
+        <mxCell id="c14" value="#OnModelCreating(modelBuilder: ModelBuilder): void" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-data-ent0002">
+          <mxGeometry as="geometry" x="13.0" y="229.6642" width="461.8545" height="22.95" />
+        </mxCell>
+        <mxCell id="e15" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;strokeWidth=0.8;part=1;selectable=0;" edge="1" parent="class-data-ent0002">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1.0" y="43.78909999999999" />
+            <mxPoint as="targetPoint" x="559.0889" y="43.78909999999999" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e16" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;strokeWidth=0.8;part=1;selectable=0;" edge="1" parent="class-data-ent0002">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1.0" y="186.94529999999997" />
+            <mxPoint as="targetPoint" x="559.0889" y="186.94529999999997" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="class-data-ent0003" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="553.0" y="746.0" width="303.5698" height="220.7344" />
+        </mxCell>
+        <mxCell id="c18" value="" style="rounded=0;fillColor=#F3F4F5;strokeColor=none;part=1;" vertex="1" parent="class-data-ent0003">
+          <mxGeometry as="geometry" x="1" y="1" width="301.5698" height="42.7891" />
+        </mxCell>
+        <mxCell id="c19" value="ChatEnt" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=1;part=1;" vertex="1" parent="class-data-ent0003">
+          <mxGeometry as="geometry" x="113.7756" y="9.9298" width="80.0186" height="22.95" />
+        </mxCell>
+        <mxCell id="c20" value="+Id: Guid" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-data-ent0003">
+          <mxGeometry as="geometry" x="13.0" y="52.7188" width="84.6421" height="22.95" />
+        </mxCell>
+        <mxCell id="c21" value="+Name: string?" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-data-ent0003">
+          <mxGeometry as="geometry" x="13.0" y="86.5079" width="137.3521" height="22.95" />
+        </mxCell>
+        <mxCell id="c22" value="+IsGlobal: bool" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-data-ent0003">
+          <mxGeometry as="geometry" x="13.0" y="120.297" width="133.791" height="22.95" />
+        </mxCell>
+        <mxCell id="c23" value="+ChatUsers: List&lt;ChatUserEnt&gt;" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-data-ent0003">
+          <mxGeometry as="geometry" x="13.0" y="154.086" width="281.5698" height="22.95" />
+        </mxCell>
+        <mxCell id="c24" value="+Messages: List&lt;MessageEnt&gt;" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-data-ent0003">
+          <mxGeometry as="geometry" x="13.0" y="187.8751" width="273.6343" height="22.95" />
+        </mxCell>
+        <mxCell id="e25" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;strokeWidth=0.8;part=1;selectable=0;" edge="1" parent="class-data-ent0003">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1.0" y="43.78910000000002" />
+            <mxPoint as="targetPoint" x="302.5698" y="43.78910000000002" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="class-data-ent0004" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="610.0" y="1105.5" width="190.2642" height="186.9453" />
+        </mxCell>
+        <mxCell id="c27" value="" style="rounded=0;fillColor=#F3F4F5;strokeColor=none;part=1;" vertex="1" parent="class-data-ent0004">
+          <mxGeometry as="geometry" x="1" y="1" width="188.2642" height="42.7891" />
+        </mxCell>
+        <mxCell id="c28" value="ChatUserEnt" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=1;part=1;" vertex="1" parent="class-data-ent0004">
+          <mxGeometry as="geometry" x="35.2046" y="9.9298" width="123.855" height="22.95" />
+        </mxCell>
+        <mxCell id="c29" value="+UserId: Guid" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-data-ent0004">
+          <mxGeometry as="geometry" x="13.0" y="52.7188" width="123.3901" height="22.95" />
+        </mxCell>
+        <mxCell id="c30" value="+User: AppUserEnt" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-data-ent0004">
+          <mxGeometry as="geometry" x="13.0" y="86.5079" width="168.2642" height="22.95" />
+        </mxCell>
+        <mxCell id="c31" value="+ChatId: Guid" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-data-ent0004">
+          <mxGeometry as="geometry" x="13.0" y="120.297" width="124.3696" height="22.95" />
+        </mxCell>
+        <mxCell id="c32" value="+Chat: ChatEnt" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-data-ent0004">
+          <mxGeometry as="geometry" x="13.0" y="154.086" width="137.0117" height="22.95" />
+        </mxCell>
+        <mxCell id="e33" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;strokeWidth=0.8;part=1;selectable=0;" edge="1" parent="class-data-ent0004">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1.0" y="43.78909999999996" />
+            <mxPoint as="targetPoint" x="189.26419999999996" y="43.78909999999996" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="class-data-ent0005" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="334.0" y="1038.0" width="220.0806" height="322.1016" />
+        </mxCell>
+        <mxCell id="c35" value="" style="rounded=0;fillColor=#F3F4F5;strokeColor=none;part=1;" vertex="1" parent="class-data-ent0005">
+          <mxGeometry as="geometry" x="1" y="1" width="218.0806" height="42.7891" />
+        </mxCell>
+        <mxCell id="c36" value="MessageEnt" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=1;part=1;" vertex="1" parent="class-data-ent0005">
+          <mxGeometry as="geometry" x="52.1921" y="9.9298" width="119.6963" height="22.95" />
+        </mxCell>
+        <mxCell id="c37" value="+Id: Guid" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-data-ent0005">
+          <mxGeometry as="geometry" x="13.0" y="52.7188" width="84.6421" height="22.95" />
+        </mxCell>
+        <mxCell id="c38" value="+Text: string?" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-data-ent0005">
+          <mxGeometry as="geometry" x="13.0" y="86.5079" width="124.7681" height="22.95" />
+        </mxCell>
+        <mxCell id="c39" value="+FileUrl: string?" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-data-ent0005">
+          <mxGeometry as="geometry" x="13.0" y="120.297" width="141.0376" height="22.95" />
+        </mxCell>
+        <mxCell id="c40" value="+CreatedAt: DateTime" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-data-ent0005">
+          <mxGeometry as="geometry" x="13.0" y="154.086" width="198.0806" height="22.95" />
+        </mxCell>
+        <mxCell id="c41" value="+ChatId: Guid" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-data-ent0005">
+          <mxGeometry as="geometry" x="13.0" y="187.8751" width="124.3696" height="22.95" />
+        </mxCell>
+        <mxCell id="c42" value="+Chat: ChatEnt" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-data-ent0005">
+          <mxGeometry as="geometry" x="13.0" y="221.6642" width="137.0117" height="22.95" />
+        </mxCell>
+        <mxCell id="c43" value="+SenderId: Guid" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-data-ent0005">
+          <mxGeometry as="geometry" x="13.0" y="255.4532" width="144.9058" height="22.95" />
+        </mxCell>
+        <mxCell id="c44" value="+Sender: AppUserEnt" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-data-ent0005">
+          <mxGeometry as="geometry" x="13.0" y="289.2423" width="189.7798" height="22.95" />
+        </mxCell>
+        <mxCell id="e45" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;strokeWidth=0.8;part=1;selectable=0;" edge="1" parent="class-data-ent0005">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1.0" y="43.78909999999996" />
+            <mxPoint as="targetPoint" x="219.0806" y="43.78909999999996" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="class-data-ent0006" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="181.5" y="834.5" width="133.1729" height="43.7891" />
+        </mxCell>
+        <mxCell id="c47" value="AppUserEnt" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=1;part=1;" vertex="1" parent="class-data-ent0006">
+          <mxGeometry as="geometry" x="10.0" y="9.9298" width="117.1729" height="22.95" />
+        </mxCell>
+        <mxCell id="class-data-ent0007" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1035.5" y="813.5" width="249.3906" height="85.5781" />
+        </mxCell>
+        <mxCell id="c49" value="" style="rounded=0;fillColor=#F3F4F5;strokeColor=none;part=1;" vertex="1" parent="class-data-ent0007">
+          <mxGeometry as="geometry" x="1" y="1" width="247.3906" height="42.7891" />
+        </mxCell>
+        <mxCell id="c50" value="DateTimeUtcConverter" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=1;part=1;" vertex="1" parent="class-data-ent0007">
+          <mxGeometry as="geometry" x="15.0918" y="9.9298" width="223.207" height="22.95" />
+        </mxCell>
+        <mxCell id="c51" value="+DateTimeUtcConverter()" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-data-ent0007">
+          <mxGeometry as="geometry" x="13.0" y="52.7188" width="227.3906" height="22.95" />
+        </mxCell>
+        <mxCell id="e52" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;strokeWidth=0.8;part=1;selectable=0;" edge="1" parent="class-data-ent0007">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1.0" y="43.78909999999996" />
+            <mxPoint as="targetPoint" x="248.39059999999995" y="43.78909999999996" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="class-data-ent0008" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="396.5" y="297.0" width="596.9956" height="77.5781" />
+        </mxCell>
+        <mxCell id="c54" value="«внешний»" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=2;part=1;" vertex="1" parent="class-data-ent0008">
+          <mxGeometry as="geometry" x="247.8257" y="9.9298" width="105.3442" height="22.95" />
+        </mxCell>
+        <mxCell id="c55" value="IdentityDbContext&lt;AppUserEnt, IdentityRole&lt;Guid&gt;, Guid&gt;" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=1;part=1;" vertex="1" parent="class-data-ent0008">
+          <mxGeometry as="geometry" x="10.0" y="43.7188" width="580.9956" height="22.95" />
+        </mxCell>
+        <mxCell id="class-data-ent0009" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="106.0" y="504.5" width="211.665" height="77.5781" />
+        </mxCell>
+        <mxCell id="c57" value="«внешний»" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=2;part=1;" vertex="1" parent="class-data-ent0009">
+          <mxGeometry as="geometry" x="55.1604" y="9.9298" width="105.3442" height="22.95" />
+        </mxCell>
+        <mxCell id="c58" value="IdentityUser&lt;Guid&gt;" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=1;part=1;" vertex="1" parent="class-data-ent0009">
+          <mxGeometry as="geometry" x="10.0" y="43.7188" width="195.665" height="22.95" />
+        </mxCell>
+        <mxCell id="class-data-ent0010" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="993.0" y="504.5" width="394.0581" height="77.5781" />
+        </mxCell>
+        <mxCell id="c60" value="«внешний»" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=2;part=1;" vertex="1" parent="class-data-ent0010">
+          <mxGeometry as="geometry" x="146.3569" y="9.9298" width="105.3442" height="22.95" />
+        </mxCell>
+        <mxCell id="c61" value="ValueConverter&lt;DateTime, DateTime&gt;" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=1;part=1;" vertex="1" parent="class-data-ent0010">
+          <mxGeometry as="geometry" x="10.0" y="43.7188" width="378.0581" height="22.95" />
+        </mxCell>
+        <mxCell id="e62" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;startArrow=block;startFill=0;startSize=16;exitX=0.5000036851192874;exitY=1;exitPerimeter=0;entryX=0.49992063759878125;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-data-ent0008" target="class-data-ent0002">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="695.0" y="375.1714" />
+            <mxPoint as="targetPoint" x="695.0" y="411.8374" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e63" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;startArrow=block;startFill=0;startSize=16;exitX=0.5095320435593981;exitY=1;exitPerimeter=0;entryX=0.46724821641640296;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-data-ent0009" target="class-data-ent0006">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="213.8501" y="582.5604000000001" />
+            <mxPoint as="targetPoint" x="243.7248" y="834.3852" />
+            <Array as="points">
+              <mxPoint x="218.0251" y="649.0769" />
+              <mxPoint x="224.5133" y="715.6783" />
+              <mxPoint x="231.5719" y="766.7215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e64" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;startArrow=block;startFill=0;startSize=16;exitX=0.4905911082655071;exitY=1;exitPerimeter=0;entryX=0.5155302565533749;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-data-ent0010" target="class-data-ent0007">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1186.3214" y="582.6347000000001" />
+            <mxPoint as="targetPoint" x="1164.0684" y="813.3246" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e65" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;endArrow=open;endFill=0;endSize=9;exitX=0.5074148050425566;exitY=1;exitPerimeter=0;entryX=0.48910629449965043;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-data-ent0002" target="class-data-ent0003">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="699.1974" y="675.0402" />
+            <mxPoint as="targetPoint" x="701.4779" y="745.9640999999999" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c66" value="Chats" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=15.0;fontColor=#202020;fontStyle=0;fontStyle=0;" vertex="1" parent="e65">
+          <mxGeometry as="geometry" x="0" y="0" width="46.8687" height="20.25" relative="1">
+            <mxPoint as="offset" x="9.66235000000006" y="-10.328850000000102" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e67" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;endArrow=open;endFill=0;endSize=9;exitX=0.7362950774421705;exitY=1;exitPerimeter=0;entryX=0.9407445015930481;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-data-ent0002" target="class-data-ent0004">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="827.3907" y="675.1129000000001" />
+            <mxPoint as="targetPoint" x="788.99" y="1105.3229999999999" />
+            <Array as="points">
+              <mxPoint x="842.3774" y="697.7895" />
+              <mxPoint x="855.4347" y="721.48" />
+              <mxPoint x="863.6231" y="739.8023" />
+              <mxPoint x="873.6731" y="767.9282" />
+              <mxPoint x="879.7978" y="787.8784" />
+              <mxPoint x="884.42" y="806.2524" />
+              <mxPoint x="887.5858" y="823.4521" />
+              <mxPoint x="889.341" y="839.8794" />
+              <mxPoint x="889.7319" y="855.9362" />
+              <mxPoint x="888.8043" y="872.0243" />
+              <mxPoint x="886.6042" y="888.5455" />
+              <mxPoint x="878.5709" y="924.4951" />
+              <mxPoint x="866.0" y="967.0" />
+              <mxPoint x="852.1989" y="1003.3953" />
+              <mxPoint x="840.9901" y="1026.4703" />
+              <mxPoint x="828.437" y="1048.6554" />
+              <mxPoint x="807.5784" y="1080.3784" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c68" value="ChatUsers" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=15.0;fontColor=#202020;fontStyle=0;fontStyle=0;" vertex="1" parent="e67">
+          <mxGeometry as="geometry" x="0" y="0" width="81.0581" height="20.25" relative="1">
+            <mxPoint as="offset" x="13.864224964363302" y="-48.9437235949473" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e69" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;endArrow=open;endFill=0;endSize=9;exitX=0.15700561107352778;exitY=1;exitPerimeter=0;entryX=0.4514791399151039;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-data-ent0002" target="class-data-ent0005">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="502.9371" y="675.0151000000001" />
+            <mxPoint as="targetPoint" x="433.3618" y="1037.944" />
+            <Array as="points">
+              <mxPoint x="488.4522" y="691.4906" />
+              <mxPoint x="475.1382" y="708.8265" />
+              <mxPoint x="463.2394" y="727.003" />
+              <mxPoint x="456.2137" y="739.5777" />
+              <mxPoint x="447.4607" y="760.0699" />
+              <mxPoint x="442.8418" y="777.0148" />
+              <mxPoint x="439.0791" y="796.5044" />
+              <mxPoint x="433.864" y="841.7971" />
+              <mxPoint x="431.3" y="893.3071" />
+              <mxPoint x="430.8718" y="948.3931" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c70" value="Messages" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=15.0;fontColor=#202020;fontStyle=0;fontStyle=0;" vertex="1" parent="e69">
+          <mxGeometry as="geometry" x="0" y="0" width="77.5571" height="20.25" relative="1">
+            <mxPoint as="offset" x="28.410284137853637" y="-1.1339379799313747" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e71" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;endArrow=open;endFill=0;endSize=9;exitX=0;exitY=0.8982730682293465;exitPerimeter=0;entryX=0.43993334980315063;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-data-ent0002" target="class-data-ent0006">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="414.8551" y="647.8177000000001" />
+            <mxPoint as="targetPoint" x="240.0872" y="834.3303" />
+            <Array as="points">
+              <mxPoint x="327.0" y="675.0" />
+              <mxPoint x="310.2953" y="677.871" />
+              <mxPoint x="281.8616" y="677.0307" />
+              <mxPoint x="269.37919999999997" y="677.8108" />
+              <mxPoint x="263.4069" y="679.4834000000001" />
+              <mxPoint x="257.551" y="682.3854" />
+              <mxPoint x="251.7644" y="686.7973" />
+              <mxPoint x="246.0" y="693.0" />
+              <mxPoint x="238.7727" y="703.5745" />
+              <mxPoint x="233.3077" y="714.8309" />
+              <mxPoint x="229.4351" y="726.6041" />
+              <mxPoint x="226.985" y="738.7295" />
+              <mxPoint x="225.7876" y="751.0423" />
+              <mxPoint x="225.6729" y="763.3775" />
+              <mxPoint x="228.0125" y="787.4561" />
+              <mxPoint x="232.6446" y="809.6469" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c72" value="Users (унаследовано)" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=15.0;fontColor=#202020;fontStyle=0;fontStyle=0;" vertex="1" parent="e71">
+          <mxGeometry as="geometry" x="0" y="0" width="173.9805" height="20.25" relative="1">
+            <mxPoint as="offset" x="-2.3225790299626397" y="17.613811247178376" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e73" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;endArrow=open;endFill=0;endSize=9;exitX=0.83653666409029;exitY=1;exitPerimeter=0;entryX=0.26425895763513124;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-data-ent0002" target="class-data-ent0007">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="883.5349" y="675.145" />
+            <mxPoint as="targetPoint" x="1101.4036999999998" y="813.3823" />
+            <Array as="points">
+              <mxPoint x="911.3957" y="696.5317" />
+              <mxPoint x="935.6275" y="719.3326" />
+              <mxPoint x="948.0" y="728.0" />
+              <mxPoint x="959.8545" y="734.0724" />
+              <mxPoint x="987.548" y="743.7946" />
+              <mxPoint x="1010.6618" y="756.1135" />
+              <mxPoint x="1055.2236" y="782.7258" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c74" value="преобразование времени" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=15.0;fontColor=#202020;fontStyle=0;fontStyle=0;" vertex="1" parent="e73">
+          <mxGeometry as="geometry" x="0" y="0" width="206.1265" height="20.25" relative="1">
+            <mxPoint as="offset" x="-33.792484569289854" y="-45.35047230715645" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e75" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;exitX=0.500708568507144;exitY=1;exitPerimeter=0;entryX=0.49930570228135407;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-data-ent0003" target="class-data-ent0004">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="705.0" y="967.1106" />
+            <mxPoint as="targetPoint" x="705.0" y="1105.4434999999999" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c76" value="участники" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=15.0;fontColor=#202020;fontStyle=0;fontStyle=0;" vertex="1" parent="e75">
+          <mxGeometry as="geometry" x="0" y="0" width="86.2803" height="20.25" relative="1">
+            <mxPoint as="offset" x="9.0" y="-44.10374999999988" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c77" value="0..*" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=15.0;fontColor=#202020;fontStyle=0;fontStyle=0;" vertex="1" parent="e75">
+          <mxGeometry as="geometry" x="0" y="0" width="30.5796" height="20.25" relative="1">
+            <mxPoint as="offset" x="-34.0" y="42.33985000000007" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c78" value="1" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=15.0;fontColor=#202020;fontStyle=0;fontStyle=0;" vertex="1" parent="e75">
+          <mxGeometry as="geometry" x="0" y="0" width="13.5435" height="20.25" relative="1">
+            <mxPoint as="offset" x="-17.0" y="-62.9931499999999" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e79" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;exitX=0.18827103354813285;exitY=1;exitPerimeter=0;entryX=1;entryY=0.007427159629135581;entryPerimeter=0;" edge="1" parent="1" source="class-data-ent0003" target="class-data-ent0005">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="610.1533999999999" y="967.2284" />
+            <mxPoint as="targetPoint" x="554.1119" y="1040.3923" />
+            <Array as="points">
+              <mxPoint x="585.5607" y="998.4783" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c80" value="сообщения" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=15.0;fontColor=#202020;fontStyle=0;fontStyle=0;" vertex="1" parent="e79">
+          <mxGeometry as="geometry" x="0" y="0" width="91.7881" height="20.25" relative="1">
+            <mxPoint as="offset" x="23.230564626271075" y="-11.357926560529563" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c81" value="0..*" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=15.0;fontColor=#202020;fontStyle=0;fontStyle=0;" vertex="1" parent="e79">
+          <mxGeometry as="geometry" x="0" y="0" width="30.5796" height="20.25" relative="1">
+            <mxPoint as="offset" x="-19.657535373728933" y="43.034373439470414" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c82" value="1" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=15.0;fontColor=#202020;fontStyle=0;fontStyle=0;" vertex="1" parent="e79">
+          <mxGeometry as="geometry" x="0" y="0" width="13.5435" height="20.25" relative="1">
+            <mxPoint as="offset" x="11.383964626270995" y="-30.129426560529623" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e83" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;startArrow=open;startFill=0;startSize=9;exitX=0.720809564108013;exitY=1;exitPerimeter=0;entryX=0.1383476239881174;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-data-ent0006" target="class-data-ent0004">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="277.4923" y="878.5513" />
+            <mxPoint as="targetPoint" x="636.3226" y="1105.0941" />
+            <Array as="points">
+              <mxPoint x="326.0515" y="911.7061" />
+              <mxPoint x="362.3854" y="935.2708" />
+              <mxPoint x="402.9434" y="960.2533" />
+              <mxPoint x="446.3817" y="985.2955" />
+              <mxPoint x="491.3564" y="1009.0394" />
+              <mxPoint x="514.0" y="1020.0" />
+              <mxPoint x="527.8272999999999" y="1025.1199000000001" />
+              <mxPoint x="546.4476" y="1029.7076" />
+              <mxPoint x="558.4106" y="1035.0877" />
+              <mxPoint x="576.2685" y="1047.6396" />
+              <mxPoint x="595.5025" y="1063.6426000000001" />
+              <mxPoint x="613.7731" y="1080.9678" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c84" value="User" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=15.0;fontColor=#202020;fontStyle=0;fontStyle=0;" vertex="1" parent="e83">
+          <mxGeometry as="geometry" x="0" y="0" width="38.1895" height="20.25" relative="1">
+            <mxPoint as="offset" x="64.1381059659339" y="0.2889894083549507" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c85" value="0..*" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=15.0;fontColor=#202020;fontStyle=0;fontStyle=0;" vertex="1" parent="e83">
+          <mxGeometry as="geometry" x="0" y="0" width="30.5796" height="20.25" relative="1">
+            <mxPoint as="offset" x="143.46070596593387" y="86.38318940835495" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c86" value="1" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=15.0;fontColor=#202020;fontStyle=0;fontStyle=0;" vertex="1" parent="e83">
+          <mxGeometry as="geometry" x="0" y="0" width="13.5435" height="20.25" relative="1">
+            <mxPoint as="offset" x="-198.3695940340661" y="-107.15971059164508" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e87" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;startArrow=open;startFill=0;startSize=9;exitX=0.502072118276316;exitY=1;exitPerimeter=0;entryX=0;entryY=0.1869518810213919;entryPerimeter=0;" edge="1" parent="1" source="class-data-ent0006" target="class-data-ent0005">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="248.3624" y="878.6903" />
+            <mxPoint as="targetPoint" x="333.7191" y="1098.2175" />
+            <Array as="points">
+              <mxPoint x="250.6075" y="912.8552" />
+              <mxPoint x="255.4644" y="946.9262" />
+              <mxPoint x="260.9384" y="971.3419" />
+              <mxPoint x="268.6542" y="996.0152" />
+              <mxPoint x="279.0" y="1020.0" />
+              <mxPoint x="294.7867" y="1047.3635" />
+              <mxPoint x="313.3556" y="1073.5562" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c88" value="Sender" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=15.0;fontColor=#202020;fontStyle=0;fontStyle=0;" vertex="1" parent="e87">
+          <mxGeometry as="geometry" x="0" y="0" width="57.1738" height="20.25" relative="1">
+            <mxPoint as="offset" x="18.89551307414905" y="-4.885652819781626" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c89" value="0..*" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=15.0;fontColor=#202020;fontStyle=0;fontStyle=0;" vertex="1" parent="e87">
+          <mxGeometry as="geometry" x="0" y="0" width="30.5796" height="20.25" relative="1">
+            <mxPoint as="offset" x="30.614613074149077" y="74.33184718021835" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c90" value="1" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=15.0;fontColor=#202020;fontStyle=0;fontStyle=0;" vertex="1" parent="e87">
+          <mxGeometry as="geometry" x="0" y="0" width="13.5435" height="20.25" relative="1">
+            <mxPoint as="offset" x="-37.74208692585094" y="-112.19525281978167" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c91" value="AppDbContext объединяет таблицы пользователей, чатов, участников и сообщений.&#10;Доступ к общему чату не требует записи в ChatUsers. Users унаследован от IdentityDbContext." style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17;fontColor=#202020;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="64.0" y="1430.0" width="1372" height="72" />
+        </mxCell>
+        <mxCell id="c92" value="+ public   # protected   − private&#10;Подчёркивание обозначает статический член.&#10;Собственные члены показаны полностью. Миграции и методы, создаваемые для record, опущены." style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17;fontColor=#202020;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="64.0" y="1540.0" width="1372" height="102" />
+        </mxCell>
+        <mxCell id="c94" value="" style="rounded=0;fillColor=#FFFFFF;strokeColor=#B6BBC0;strokeWidth=1;locked=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1500.0" y="180.0" width="2080" height="1500" />
+        </mxCell>
+        <mxCell id="c95" value="2. Сообщения и доставка" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=25;fontColor=#202020;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1524.0" y="200.0" width="2032" height="42" />
+        </mxCell>
+        <mxCell id="class-messaging-ent0002" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="2012.0" y="665.0" width="588.5688" height="226.5234" />
+        </mxCell>
+        <mxCell id="c97" value="" style="rounded=0;fillColor=#F3F4F5;strokeColor=none;part=1;" vertex="1" parent="class-messaging-ent0002">
+          <mxGeometry as="geometry" x="1" y="1" width="586.5688" height="76.5781" />
+        </mxCell>
+        <mxCell id="c98" value="«interface»" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=2;part=1;" vertex="1" parent="class-messaging-ent0002">
+          <mxGeometry as="geometry" x="245.8826" y="9.9298" width="100.8037" height="22.95" />
+        </mxCell>
+        <mxCell id="c99" value="IChatService" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=3;part=1;" vertex="1" parent="class-messaging-ent0002">
+          <mxGeometry as="geometry" x="233.697" y="43.7188" width="125.1748" height="22.95" />
+        </mxCell>
+        <mxCell id="c100" value="+HasAccessToChatAsync(userId: Guid, chatId: Guid): Task&lt;bool&gt;" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0002">
+          <mxGeometry as="geometry" x="13.0" y="86.5079" width="566.5688" height="22.95" />
+        </mxCell>
+        <mxCell id="c101" value="+SaveMessageAsync(userId: Guid, chatId: Guid," style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0002">
+          <mxGeometry as="geometry" x="13.0" y="120.297" width="415.0713" height="22.95" />
+        </mxCell>
+        <mxCell id="c102" value="message: string, fileUrl: string?): Task&lt;ChatMessageDto?&gt;" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0002">
+          <mxGeometry as="geometry" x="29.2114" y="140.086" width="509.3101" height="22.95" />
+        </mxCell>
+        <mxCell id="c103" value="+CreateOrGetPrivateChatAsync(currentUserId: Guid," style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0002">
+          <mxGeometry as="geometry" x="13.0" y="173.8751" width="454.915" height="22.95" />
+        </mxCell>
+        <mxCell id="c104" value="targetEmail: string): Task&lt;(ChatEnt Chat, bool IsNew)&gt;" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0002">
+          <mxGeometry as="geometry" x="29.2114" y="193.6642" width="478.6221" height="22.95" />
+        </mxCell>
+        <mxCell id="e105" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;strokeWidth=0.8;part=1;selectable=0;" edge="1" parent="class-messaging-ent0002">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1.0" y="77.5781" />
+            <mxPoint as="targetPoint" x="587.5688" y="77.5781" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="class-messaging-ent0003" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1876.0" y="930.0" width="588.5688" height="226.5234" />
+        </mxCell>
+        <mxCell id="c107" value="" style="rounded=0;fillColor=#F3F4F5;strokeColor=none;part=1;" vertex="1" parent="class-messaging-ent0003">
+          <mxGeometry as="geometry" x="1" y="1" width="586.5688" height="42.7891" />
+        </mxCell>
+        <mxCell id="c108" value="ChatService" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=1;part=1;" vertex="1" parent="class-messaging-ent0003">
+          <mxGeometry as="geometry" x="236.8596" y="9.9298" width="118.8496" height="22.95" />
+        </mxCell>
+        <mxCell id="c109" value="+ChatService(db: AppDbContext)" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0003">
+          <mxGeometry as="geometry" x="13.0" y="52.7188" width="290.7671" height="22.95" />
+        </mxCell>
+        <mxCell id="c110" value="+HasAccessToChatAsync(userId: Guid, chatId: Guid): Task&lt;bool&gt;" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0003">
+          <mxGeometry as="geometry" x="13.0" y="86.5079" width="566.5688" height="22.95" />
+        </mxCell>
+        <mxCell id="c111" value="+SaveMessageAsync(userId: Guid, chatId: Guid," style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0003">
+          <mxGeometry as="geometry" x="13.0" y="120.297" width="415.0713" height="22.95" />
+        </mxCell>
+        <mxCell id="c112" value="message: string, fileUrl: string?): Task&lt;ChatMessageDto?&gt;" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0003">
+          <mxGeometry as="geometry" x="29.2114" y="140.086" width="509.3101" height="22.95" />
+        </mxCell>
+        <mxCell id="c113" value="+CreateOrGetPrivateChatAsync(currentUserId: Guid," style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0003">
+          <mxGeometry as="geometry" x="13.0" y="173.8751" width="454.915" height="22.95" />
+        </mxCell>
+        <mxCell id="c114" value="targetEmail: string): Task&lt;(ChatEnt Chat, bool IsNew)&gt;" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0003">
+          <mxGeometry as="geometry" x="29.2114" y="193.6642" width="478.6221" height="22.95" />
+        </mxCell>
+        <mxCell id="e115" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;strokeWidth=0.8;part=1;selectable=0;" edge="1" parent="class-messaging-ent0003">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1.0" y="43.78909999999996" />
+            <mxPoint as="targetPoint" x="587.5688" y="43.78909999999996" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="class-messaging-ent0004" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="2328.5" y="407.0" width="602.0161" height="186.9453" />
+        </mxCell>
+        <mxCell id="c117" value="" style="rounded=0;fillColor=#F3F4F5;strokeColor=none;part=1;" vertex="1" parent="class-messaging-ent0004">
+          <mxGeometry as="geometry" x="1" y="1" width="600.0161" height="42.7891" />
+        </mxCell>
+        <mxCell id="c118" value="ChatHub" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=1;part=1;" vertex="1" parent="class-messaging-ent0004">
+          <mxGeometry as="geometry" x="259.6702" y="9.9298" width="86.6758" height="22.95" />
+        </mxCell>
+        <mxCell id="c119" value="+ChatHub(chatService: IChatService)" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0004">
+          <mxGeometry as="geometry" x="13.0" y="52.7188" width="324.3188" height="22.95" />
+        </mxCell>
+        <mxCell id="c120" value="+JoinChat(chatId: Guid): Task" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0004">
+          <mxGeometry as="geometry" x="13.0" y="86.5079" width="256.3853" height="22.95" />
+        </mxCell>
+        <mxCell id="c121" value="+LeaveChat(chatId: Guid): Task" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0004">
+          <mxGeometry as="geometry" x="13.0" y="120.297" width="276.3403" height="22.95" />
+        </mxCell>
+        <mxCell id="c122" value="+SendMessage(chatId: Guid, message: string, fileUrl: string?): Task" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0004">
+          <mxGeometry as="geometry" x="13.0" y="154.086" width="580.0161" height="22.95" />
+        </mxCell>
+        <mxCell id="e123" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;strokeWidth=0.8;part=1;selectable=0;" edge="1" parent="class-messaging-ent0004">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1.0" y="43.78909999999999" />
+            <mxPoint as="targetPoint" x="601.0161" y="43.78909999999999" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="class-messaging-ent0005" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="2657.5" y="702.0" width="517.6221" height="153.1563" />
+        </mxCell>
+        <mxCell id="c125" value="" style="rounded=0;fillColor=#F3F4F5;strokeColor=none;part=1;" vertex="1" parent="class-messaging-ent0005">
+          <mxGeometry as="geometry" x="1" y="1" width="515.6221" height="76.5781" />
+        </mxCell>
+        <mxCell id="c126" value="«interface»" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=2;part=1;" vertex="1" parent="class-messaging-ent0005">
+          <mxGeometry as="geometry" x="210.4092" y="9.9298" width="100.8037" height="22.95" />
+        </mxCell>
+        <mxCell id="c127" value="IChatClient" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=3;part=1;" vertex="1" parent="class-messaging-ent0005">
+          <mxGeometry as="geometry" x="205.6155" y="43.7188" width="110.3911" height="22.95" />
+        </mxCell>
+        <mxCell id="c128" value="+ReceiveChatMessage(message: ChatMessageDto): Task" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0005">
+          <mxGeometry as="geometry" x="13.0" y="86.5079" width="495.6221" height="22.95" />
+        </mxCell>
+        <mxCell id="c129" value="+ReceiveNewChat(chat: ChatDto): Task" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0005">
+          <mxGeometry as="geometry" x="13.0" y="120.297" width="344.4897" height="22.95" />
+        </mxCell>
+        <mxCell id="e130" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;strokeWidth=0.8;part=1;selectable=0;" edge="1" parent="class-messaging-ent0005">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1.0" y="77.5781" />
+            <mxPoint as="targetPoint" x="516.6221" y="77.5781" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="class-messaging-ent0006" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="2695.5" y="929.0" width="446.061" height="228.7344" />
+        </mxCell>
+        <mxCell id="c132" value="" style="rounded=0;fillColor=#F3F4F5;strokeColor=none;part=1;" vertex="1" parent="class-messaging-ent0006">
+          <mxGeometry as="geometry" x="1" y="1" width="444.061" height="76.5781" />
+        </mxCell>
+        <mxCell id="c133" value="«record»" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=2;part=1;" vertex="1" parent="class-messaging-ent0006">
+          <mxGeometry as="geometry" x="185.0503" y="9.9298" width="79.9604" height="22.95" />
+        </mxCell>
+        <mxCell id="c134" value="ChatDto" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=1;part=1;" vertex="1" parent="class-messaging-ent0006">
+          <mxGeometry as="geometry" x="183.9836" y="43.7188" width="82.0938" height="22.95" />
+        </mxCell>
+        <mxCell id="c135" value="+Id: Guid" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0006">
+          <mxGeometry as="geometry" x="13.0" y="86.5079" width="84.6421" height="22.95" />
+        </mxCell>
+        <mxCell id="c136" value="+Name: string?" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0006">
+          <mxGeometry as="geometry" x="13.0" y="120.297" width="137.3521" height="22.95" />
+        </mxCell>
+        <mxCell id="c137" value="+IsGlobal: bool" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0006">
+          <mxGeometry as="geometry" x="13.0" y="154.086" width="133.791" height="22.95" />
+        </mxCell>
+        <mxCell id="c138" value="+ChatDto(Id: Guid, Name: string?, IsGlobal: bool)" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0006">
+          <mxGeometry as="geometry" x="13.0" y="195.8751" width="424.061" height="22.95" />
+        </mxCell>
+        <mxCell id="e139" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;strokeWidth=0.8;part=1;selectable=0;" edge="1" parent="class-messaging-ent0006">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1.0" y="77.57809999999995" />
+            <mxPoint as="targetPoint" x="445.0609999999999" y="77.57809999999995" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e140" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;strokeWidth=0.8;part=1;selectable=0;" edge="1" parent="class-messaging-ent0006">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1.0" y="186.94529999999997" />
+            <mxPoint as="targetPoint" x="445.0609999999999" y="186.94529999999997" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="class-messaging-ent0007" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="2371.0" y="1195.0" width="517.4727" height="403.4688" />
+        </mxCell>
+        <mxCell id="c142" value="" style="rounded=0;fillColor=#F3F4F5;strokeColor=none;part=1;" vertex="1" parent="class-messaging-ent0007">
+          <mxGeometry as="geometry" x="1" y="1" width="515.4727" height="76.5781" />
+        </mxCell>
+        <mxCell id="c143" value="«record»" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=2;part=1;" vertex="1" parent="class-messaging-ent0007">
+          <mxGeometry as="geometry" x="220.7561" y="9.9298" width="79.9604" height="22.95" />
+        </mxCell>
+        <mxCell id="c144" value="ChatMessageDto" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=1;part=1;" vertex="1" parent="class-messaging-ent0007">
+          <mxGeometry as="geometry" x="177.7622" y="43.7188" width="165.9482" height="22.95" />
+        </mxCell>
+        <mxCell id="c145" value="+Id: Guid" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0007">
+          <mxGeometry as="geometry" x="13.0" y="86.5079" width="84.6421" height="22.95" />
+        </mxCell>
+        <mxCell id="c146" value="+ChatId: Guid" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0007">
+          <mxGeometry as="geometry" x="13.0" y="120.297" width="124.3696" height="22.95" />
+        </mxCell>
+        <mxCell id="c147" value="+SenderId: Guid" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0007">
+          <mxGeometry as="geometry" x="13.0" y="154.086" width="144.9058" height="22.95" />
+        </mxCell>
+        <mxCell id="c148" value="+SenderEmail: string?" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0007">
+          <mxGeometry as="geometry" x="13.0" y="187.8751" width="194.6274" height="22.95" />
+        </mxCell>
+        <mxCell id="c149" value="+Text: string?" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0007">
+          <mxGeometry as="geometry" x="13.0" y="221.6642" width="124.7681" height="22.95" />
+        </mxCell>
+        <mxCell id="c150" value="+FileUrl: string?" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0007">
+          <mxGeometry as="geometry" x="13.0" y="255.4532" width="141.0376" height="22.95" />
+        </mxCell>
+        <mxCell id="c151" value="+CreatedAt: DateTime" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0007">
+          <mxGeometry as="geometry" x="13.0" y="289.2423" width="198.0806" height="22.95" />
+        </mxCell>
+        <mxCell id="c152" value="+ChatMessageDto(Id: Guid, ChatId: Guid, SenderId: Guid," style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0007">
+          <mxGeometry as="geometry" x="13.0" y="331.0313" width="495.4727" height="22.95" />
+        </mxCell>
+        <mxCell id="c153" value="SenderEmail: string?, Text: string?, FileUrl: string?," style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0007">
+          <mxGeometry as="geometry" x="29.2114" y="350.8204" width="436.7197" height="22.95" />
+        </mxCell>
+        <mxCell id="c154" value="CreatedAt: DateTime)" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-messaging-ent0007">
+          <mxGeometry as="geometry" x="29.2114" y="370.6095" width="190.4688" height="22.95" />
+        </mxCell>
+        <mxCell id="e155" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;strokeWidth=0.8;part=1;selectable=0;" edge="1" parent="class-messaging-ent0007">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1.0" y="77.57809999999995" />
+            <mxPoint as="targetPoint" x="516.4727" y="77.57809999999995" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e156" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;strokeWidth=0.8;part=1;selectable=0;" edge="1" parent="class-messaging-ent0007">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1.0" y="322.10159999999996" />
+            <mxPoint as="targetPoint" x="516.4727" y="322.10159999999996" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="class-messaging-ent0008" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="2533.0" y="292.0" width="193.3784" height="77.5781" />
+        </mxCell>
+        <mxCell id="c158" value="«внешний»" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=2;part=1;" vertex="1" parent="class-messaging-ent0008">
+          <mxGeometry as="geometry" x="46.0171" y="9.9298" width="105.3442" height="22.95" />
+        </mxCell>
+        <mxCell id="c159" value="Hub&lt;IChatClient&gt;" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=1;part=1;" vertex="1" parent="class-messaging-ent0008">
+          <mxGeometry as="geometry" x="10.0" y="43.7188" width="177.3784" height="22.95" />
+        </mxCell>
+        <mxCell id="class-messaging-ent0009" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1925.0" y="1357.5" width="158.7808" height="77.5781" />
+        </mxCell>
+        <mxCell id="c161" value="«см. 1»" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=2;part=1;" vertex="1" parent="class-messaging-ent0009">
+          <mxGeometry as="geometry" x="40.2065" y="9.9298" width="82.3677" height="22.95" />
+        </mxCell>
+        <mxCell id="c162" value="AppDbContext" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=1;part=1;" vertex="1" parent="class-messaging-ent0009">
+          <mxGeometry as="geometry" x="10.0" y="43.7188" width="142.7808" height="22.95" />
+        </mxCell>
+        <mxCell id="class-messaging-ent0010" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="2256.5" y="1357.5" width="96.0186" height="77.5781" />
+        </mxCell>
+        <mxCell id="c164" value="«см. 1»" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=2;part=1;" vertex="1" parent="class-messaging-ent0010">
+          <mxGeometry as="geometry" x="8.8254" y="9.9298" width="82.3677" height="22.95" />
+        </mxCell>
+        <mxCell id="c165" value="ChatEnt" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=1;part=1;" vertex="1" parent="class-messaging-ent0010">
+          <mxGeometry as="geometry" x="10.0" y="43.7188" width="80.0186" height="22.95" />
+        </mxCell>
+        <mxCell id="class-messaging-ent0011" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="2102.5" y="1357.5" width="135.6963" height="77.5781" />
+        </mxCell>
+        <mxCell id="c167" value="«см. 1»" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=2;part=1;" vertex="1" parent="class-messaging-ent0011">
+          <mxGeometry as="geometry" x="28.6643" y="9.9298" width="82.3677" height="22.95" />
+        </mxCell>
+        <mxCell id="c168" value="MessageEnt" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=1;part=1;" vertex="1" parent="class-messaging-ent0011">
+          <mxGeometry as="geometry" x="10.0" y="43.7188" width="119.6963" height="22.95" />
+        </mxCell>
+        <mxCell id="e169" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;startArrow=block;startFill=0;startSize=16;exitX=0.499021607377039;exitY=1;exitPerimeter=0;entryX=0.4999866282645929;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-messaging-ent0008" target="class-messaging-ent0004">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="2629.5" y="370.0083" />
+            <mxPoint as="targetPoint" x="2629.5" y="406.6932" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e170" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;startArrow=block;startFill=0;startSize=16;exitX=0.4013666711521236;exitY=1;exitPerimeter=0;entryX=0.599527701774202;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-messaging-ent0002" target="class-messaging-ent0003">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="2248.2318999999998" y="892.1802" />
+            <mxPoint as="targetPoint" x="2228.8633" y="929.6356" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e171" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;endArrow=open;endFill=0;endSize=9;exitX=0.17377425620344708;exitY=1;exitPerimeter=0;entryX=0.6021189026669439;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-messaging-ent0004" target="class-messaging-ent0002">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="2433.1149" y="594.1578999999999" />
+            <mxPoint as="targetPoint" x="2366.3884" y="664.7080000000001" />
+            <Array as="points">
+              <mxPoint x="2413.2165999999997" y="610.4542" />
+              <mxPoint x="2396.1865" y="626.9227000000001" />
+              <mxPoint x="2382.7772" y="642.322" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c172" value="проверка и сохранение" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=15.0;fontColor=#202020;fontStyle=0;fontStyle=0;" vertex="1" parent="e171">
+          <mxGeometry as="geometry" x="0" y="0" width="190.4673" height="20.25" relative="1">
+            <mxPoint as="offset" x="23.865244297734876" y="-7.315976206553273" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e173" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;endArrow=open;endFill=0;endSize=9;exitX=0.6600574303577594;exitY=1;exitPerimeter=0;entryX=0.3478682614208319;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-messaging-ent0004" target="class-messaging-ent0005">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="2725.8652" y="594.1718000000001" />
+            <mxPoint as="targetPoint" x="2837.5643" y="701.5897" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c174" value="уведомления" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=15.0;fontColor=#202020;fontStyle=0;fontStyle=0;" vertex="1" parent="e173">
+          <mxGeometry as="geometry" x="0" y="0" width="109.2051" height="20.25" relative="1">
+            <mxPoint as="offset" x="-0.2147500000000946" y="-28.70745000000005" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e175" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;endArrow=open;endFill=0;endSize=9;exitX=0.4999866282645929;exitY=1;exitPerimeter=0;entryX=0.49954326092951373;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-messaging-ent0004" target="class-messaging-ent0007">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="2629.5" y="594.2247" />
+            <mxPoint as="targetPoint" x="2629.5" y="1194.7409" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e176" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;endArrow=open;endFill=0;endSize=9;exitX=0.4009894850015835;exitY=1;exitPerimeter=0;entryX=0.603196986033576;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-messaging-ent0003" target="class-messaging-ent0009">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="2112.0099" y="1157.1619" />
+            <mxPoint as="targetPoint" x="2020.7761" y="1357.1502" />
+            <Array as="points">
+              <mxPoint x="2067.2749" y="1251.4173" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e177" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;endArrow=open;endFill=0;endSize=9;exitX=0.7503360694620578;exitY=1;exitPerimeter=0;entryX=0;entryY=0.006650824053805415;entryPerimeter=0;" edge="1" parent="1" source="class-messaging-ent0003" target="class-messaging-ent0007">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="2317.6243999999997" y="1157.0068999999999" />
+            <mxPoint as="targetPoint" x="2370.8167000000003" y="1197.6834" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e178" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;endArrow=open;endFill=0;endSize=9;exitX=0.6034089812439939;exitY=1;exitPerimeter=0;entryX=0.4117889658878592;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-messaging-ent0003" target="class-messaging-ent0010">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="2231.1477" y="1157.2222000000002" />
+            <mxPoint as="targetPoint" x="2296.0394" y="1357.4508" />
+            <Array as="points">
+              <mxPoint x="2247.5" y="1195.0" />
+              <mxPoint x="2257.8486000000003" y="1222.8791" />
+              <mxPoint x="2267.218" y="1250.9885" />
+              <mxPoint x="2282.9712" y="1305.0745" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e179" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;endArrow=open;endFill=0;endSize=9;exitX=0.5003663123155696;exitY=1;exitPerimeter=0;entryX=0.5011190430394933;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-messaging-ent0003" target="class-messaging-ent0011">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="2170.5" y="1157.0068999999999" />
+            <mxPoint as="targetPoint" x="2170.5" y="1357.1815" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e180" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;endArrow=open;endFill=0;endSize=9;exitX=0.7905490403161024;exitY=1;exitPerimeter=0;entryX=0.45674332191823847;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-messaging-ent0002" target="class-messaging-ent0007">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="2477.2925" y="892.2072" />
+            <mxPoint as="targetPoint" x="2607.3522000000003" y="1194.8413" />
+            <Array as="points">
+              <mxPoint x="2490.7512" y="907.0079" />
+              <mxPoint x="2500.6584000000003" y="919.3971" />
+              <mxPoint x="2520.2323" y="948.9198" />
+              <mxPoint x="2532.0036" y="969.4183" />
+              <mxPoint x="2552.8333000000002" y="1011.8374" />
+              <mxPoint x="2570.3288000000002" y="1055.6287" />
+              <mxPoint x="2584.8298" y="1100.1638" />
+              <mxPoint x="2596.6762" y="1144.8143" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e181" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;endArrow=open;endFill=0;endSize=9;exitX=0.7481889967663933;exitY=1;exitPerimeter=0;entryX=0.5057915862135045;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-messaging-ent0002" target="class-messaging-ent0010">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="2452.3607" y="892.0739" />
+            <mxPoint as="targetPoint" x="2305.0654" y="1357.442" />
+            <Array as="points">
+              <mxPoint x="2464.5122" y="910.008" />
+              <mxPoint x="2474.5" y="929.0" />
+              <mxPoint x="2493.116" y="972.4823" />
+              <mxPoint x="2500.4782999999998" y="992.3668" />
+              <mxPoint x="2506.2925" y="1011.3274" />
+              <mxPoint x="2510.3706" y="1029.5995" />
+              <mxPoint x="2512.5243" y="1047.4185" />
+              <mxPoint x="2512.5656" y="1065.0198" />
+              <mxPoint x="2510.3062" y="1082.6389" />
+              <mxPoint x="2505.5581" y="1100.511" />
+              <mxPoint x="2498.1332" y="1118.8716" />
+              <mxPoint x="2487.8432000000003" y="1137.9560999999999" />
+              <mxPoint x="2474.5" y="1158.0" />
+              <mxPoint x="2466.4610000000002" y="1166.989" />
+              <mxPoint x="2457.9043" y="1172.9522" />
+              <mxPoint x="2448.9101" y="1176.4751999999999" />
+              <mxPoint x="2439.5585" y="1178.1435999999999" />
+              <mxPoint x="2400.1815" y="1177.9837" />
+              <mxPoint x="2390.2455" y="1179.1635" />
+              <mxPoint x="2380.4331" y="1182.0023999999999" />
+              <mxPoint x="2370.8246" y="1187.086" />
+              <mxPoint x="2361.5" y="1195.0" />
+              <mxPoint x="2351.5188" y="1206.5148" />
+              <mxPoint x="2342.7753000000002" y="1218.8419" />
+              <mxPoint x="2335.1878" y="1231.8207" />
+              <mxPoint x="2328.6745" y="1245.2906" />
+              <mxPoint x="2318.5437" y="1273.0611" />
+              <mxPoint x="2314.7626" y="1287.0404" />
+              <mxPoint x="2309.3603000000003" y="1314.3841" />
+              <mxPoint x="2306.2927" y="1339.8372" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e182" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;endArrow=open;endFill=0;endSize=9;exitX=0.19605963501171983;exitY=0.9995899613662641;exitPerimeter=0;entryX=0.5316340359597713;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-messaging-ent0005" target="class-messaging-ent0007">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="2758.9848" y="855.0935" />
+            <mxPoint as="targetPoint" x="2646.1061" y="1194.7599" />
+            <Array as="points">
+              <mxPoint x="2731.6974" y="876.7975" />
+              <mxPoint x="2712.9231" y="894.984" />
+              <mxPoint x="2696.2156999999997" y="914.8326" />
+              <mxPoint x="2686.5" y="929.0" />
+              <mxPoint x="2682.8824" y="936.7792" />
+              <mxPoint x="2675.7059" y="963.1255" />
+              <mxPoint x="2665.2616" y="1024.2436" />
+              <mxPoint x="2655.4795" y="1102.6866" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e183" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;endArrow=open;endFill=0;endSize=9;exitX=0.501477429190137;exitY=1;exitPerimeter=0;entryX=0.49799063356805456;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-messaging-ent0005" target="class-messaging-ent0006">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="2917.0758" y="855.2177" />
+            <mxPoint as="targetPoint" x="2917.6342" y="928.6524" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c184" value="ChatHub принимает вызовы SignalR. ChatService проверяет доступ и сохраняет сообщения.&#10;IChatClient задаёт уведомления клиентам. ChatDto и ChatMessageDto передают данные без навигационных свойств." style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17;fontColor=#202020;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1524.0" y="1592.0" width="2032" height="72" />
+        </mxCell>
+        <mxCell id="c186" value="" style="rounded=0;fillColor=#FFFFFF;strokeColor=#B6BBC0;strokeWidth=1;locked=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40.0" y="1730.0" width="2120" height="1090" />
+        </mxCell>
+        <mxCell id="c187" value="3. HTTP-маршруты" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=25;fontColor=#202020;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="64.0" y="1750.0" width="2072" height="42" />
+        </mxCell>
+        <mxCell id="class-api-ent0002" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="759.0" y="1837.0" width="513.2642" height="119.3672" />
+        </mxCell>
+        <mxCell id="c189" value="" style="rounded=0;fillColor=#F3F4F5;strokeColor=none;part=1;" vertex="1" parent="class-api-ent0002">
+          <mxGeometry as="geometry" x="1" y="1" width="511.2642" height="76.5781" />
+        </mxCell>
+        <mxCell id="c190" value="«static»" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=2;part=1;" vertex="1" parent="class-api-ent0002">
+          <mxGeometry as="geometry" x="222.8022" y="9.9298" width="71.6597" height="22.95" />
+        </mxCell>
+        <mxCell id="c191" value="ApiMain" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=1;part=1;" vertex="1" parent="class-api-ent0002">
+          <mxGeometry as="geometry" x="217.8965" y="43.7188" width="81.4712" height="22.95" />
+        </mxCell>
+        <mxCell id="c192" value="+MapApi(group: RouteGroupBuilder): RouteGroupBuilder" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=4;part=1;" vertex="1" parent="class-api-ent0002">
+          <mxGeometry as="geometry" x="13.0" y="86.5079" width="491.2642" height="22.95" />
+        </mxCell>
+        <mxCell id="e193" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;strokeWidth=0.8;part=1;selectable=0;" edge="1" parent="class-api-ent0002">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1.0" y="77.5781" />
+            <mxPoint as="targetPoint" x="512.2642000000001" y="77.5781" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="class-api-ent0003" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="377.5" y="2027.0" width="601.626" height="119.3672" />
+        </mxCell>
+        <mxCell id="c195" value="" style="rounded=0;fillColor=#F3F4F5;strokeColor=none;part=1;" vertex="1" parent="class-api-ent0003">
+          <mxGeometry as="geometry" x="1" y="1" width="599.626" height="76.5781" />
+        </mxCell>
+        <mxCell id="c196" value="«static»" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=2;part=1;" vertex="1" parent="class-api-ent0003">
+          <mxGeometry as="geometry" x="266.9832" y="9.9298" width="71.6597" height="22.95" />
+        </mxCell>
+        <mxCell id="c197" value="AuthEndpoint" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=1;part=1;" vertex="1" parent="class-api-ent0003">
+          <mxGeometry as="geometry" x="235.1746" y="43.7188" width="135.2769" height="22.95" />
+        </mxCell>
+        <mxCell id="c198" value="+MapAuthEndpoint(group: RouteGroupBuilder): RouteGroupBuilder" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=4;part=1;" vertex="1" parent="class-api-ent0003">
+          <mxGeometry as="geometry" x="13.0" y="86.5079" width="579.626" height="22.95" />
+        </mxCell>
+        <mxCell id="e199" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;strokeWidth=0.8;part=1;selectable=0;" edge="1" parent="class-api-ent0003">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1.0" y="77.5781" />
+            <mxPoint as="targetPoint" x="600.626" y="77.5781" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="class-api-ent0004" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="612.5" y="2217.0" width="601.5098" height="119.3672" />
+        </mxCell>
+        <mxCell id="c201" value="" style="rounded=0;fillColor=#F3F4F5;strokeColor=none;part=1;" vertex="1" parent="class-api-ent0004">
+          <mxGeometry as="geometry" x="1" y="1" width="599.5098" height="76.5781" />
+        </mxCell>
+        <mxCell id="c202" value="«static»" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=2;part=1;" vertex="1" parent="class-api-ent0004">
+          <mxGeometry as="geometry" x="266.925" y="9.9298" width="71.6597" height="22.95" />
+        </mxCell>
+        <mxCell id="c203" value="ChatEndpoint" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=1;part=1;" vertex="1" parent="class-api-ent0004">
+          <mxGeometry as="geometry" x="235.7722" y="43.7188" width="133.9653" height="22.95" />
+        </mxCell>
+        <mxCell id="c204" value="+MapChatEndpoint(group: RouteGroupBuilder): RouteGroupBuilder" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=4;part=1;" vertex="1" parent="class-api-ent0004">
+          <mxGeometry as="geometry" x="13.0" y="86.5079" width="579.5098" height="22.95" />
+        </mxCell>
+        <mxCell id="e205" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;strokeWidth=0.8;part=1;selectable=0;" edge="1" parent="class-api-ent0004">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1.0" y="77.5781" />
+            <mxPoint as="targetPoint" x="600.5098" y="77.5781" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="class-api-ent0005" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1481.0" y="2428.0" width="621.3486" height="119.3672" />
+        </mxCell>
+        <mxCell id="c207" value="" style="rounded=0;fillColor=#F3F4F5;strokeColor=none;part=1;" vertex="1" parent="class-api-ent0005">
+          <mxGeometry as="geometry" x="1" y="1" width="619.3486" height="76.5781" />
+        </mxCell>
+        <mxCell id="c208" value="«static»" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=2;part=1;" vertex="1" parent="class-api-ent0005">
+          <mxGeometry as="geometry" x="276.8445" y="9.9298" width="71.6597" height="22.95" />
+        </mxCell>
+        <mxCell id="c209" value="UploadEndpoint" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=1;part=1;" vertex="1" parent="class-api-ent0005">
+          <mxGeometry as="geometry" x="234.22" y="43.7188" width="156.9087" height="22.95" />
+        </mxCell>
+        <mxCell id="c210" value="+MapUploadEndpoint(group: RouteGroupBuilder): RouteGroupBuilder" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=4;part=1;" vertex="1" parent="class-api-ent0005">
+          <mxGeometry as="geometry" x="13.0" y="86.5079" width="599.3486" height="22.95" />
+        </mxCell>
+        <mxCell id="e211" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;strokeWidth=0.8;part=1;selectable=0;" edge="1" parent="class-api-ent0005">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1.0" y="77.57809999999995" />
+            <mxPoint as="targetPoint" x="620.3486" y="77.57809999999995" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="class-api-ent0006" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="94.0" y="2407.0" width="327.0112" height="161.1563" />
+        </mxCell>
+        <mxCell id="c213" value="" style="rounded=0;fillColor=#F3F4F5;strokeColor=none;part=1;" vertex="1" parent="class-api-ent0006">
+          <mxGeometry as="geometry" x="1" y="1" width="325.0112" height="76.5781" />
+        </mxCell>
+        <mxCell id="c214" value="«record»" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=2;part=1;" vertex="1" parent="class-api-ent0006">
+          <mxGeometry as="geometry" x="125.5254" y="9.9298" width="79.9604" height="22.95" />
+        </mxCell>
+        <mxCell id="c215" value="CreateChatRequest" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=1;part=1;" vertex="1" parent="class-api-ent0006">
+          <mxGeometry as="geometry" x="70.3252" y="43.7188" width="190.3608" height="22.95" />
+        </mxCell>
+        <mxCell id="c216" value="+Email: string" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-api-ent0006">
+          <mxGeometry as="geometry" x="13.0" y="86.5079" width="125.3408" height="22.95" />
+        </mxCell>
+        <mxCell id="c217" value="+CreateChatRequest(Email: string)" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-api-ent0006">
+          <mxGeometry as="geometry" x="13.0" y="128.297" width="305.0112" height="22.95" />
+        </mxCell>
+        <mxCell id="e218" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;strokeWidth=0.8;part=1;selectable=0;" edge="1" parent="class-api-ent0006">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1.0" y="77.57809999999995" />
+            <mxPoint as="targetPoint" x="326.0112" y="77.57809999999995" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e219" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;strokeWidth=0.8;part=1;selectable=0;" edge="1" parent="class-api-ent0006">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1.0" y="119.36720000000003" />
+            <mxPoint as="targetPoint" x="326.0112" y="119.36720000000003" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="class-api-ent0007" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="461.0" y="2237.5" width="133.1729" height="77.5781" />
+        </mxCell>
+        <mxCell id="c221" value="«см. 1»" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=2;part=1;" vertex="1" parent="class-api-ent0007">
+          <mxGeometry as="geometry" x="27.4026" y="9.9298" width="82.3677" height="22.95" />
+        </mxCell>
+        <mxCell id="c222" value="AppUserEnt" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=1;part=1;" vertex="1" parent="class-api-ent0007">
+          <mxGeometry as="geometry" x="10.0" y="43.7188" width="117.1729" height="22.95" />
+        </mxCell>
+        <mxCell id="class-api-ent0008" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="439.0" y="2448.5" width="158.7808" height="77.5781" />
+        </mxCell>
+        <mxCell id="c224" value="«см. 1»" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=2;part=1;" vertex="1" parent="class-api-ent0008">
+          <mxGeometry as="geometry" x="40.2065" y="9.9298" width="82.3677" height="22.95" />
+        </mxCell>
+        <mxCell id="c225" value="AppDbContext" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=1;part=1;" vertex="1" parent="class-api-ent0008">
+          <mxGeometry as="geometry" x="10.0" y="43.7188" width="142.7808" height="22.95" />
+        </mxCell>
+        <mxCell id="class-api-ent0009" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="616.5" y="2448.5" width="98.0938" height="77.5781" />
+        </mxCell>
+        <mxCell id="c227" value="«см. 2»" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=2;part=1;" vertex="1" parent="class-api-ent0009">
+          <mxGeometry as="geometry" x="9.863" y="9.9298" width="82.3677" height="22.95" />
+        </mxCell>
+        <mxCell id="c228" value="ChatDto" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=1;part=1;" vertex="1" parent="class-api-ent0009">
+          <mxGeometry as="geometry" x="10.0" y="43.7188" width="82.0938" height="22.95" />
+        </mxCell>
+        <mxCell id="class-api-ent0010" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="732.5" y="2448.5" width="181.9482" height="77.5781" />
+        </mxCell>
+        <mxCell id="c230" value="«см. 2»" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=2;part=1;" vertex="1" parent="class-api-ent0010">
+          <mxGeometry as="geometry" x="51.7903" y="9.9298" width="82.3677" height="22.95" />
+        </mxCell>
+        <mxCell id="c231" value="ChatMessageDto" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=1;part=1;" vertex="1" parent="class-api-ent0010">
+          <mxGeometry as="geometry" x="10.0" y="43.7188" width="165.9482" height="22.95" />
+        </mxCell>
+        <mxCell id="class-api-ent0011" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="933.0" y="2448.5" width="141.1748" height="77.5781" />
+        </mxCell>
+        <mxCell id="c233" value="«см. 2»" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=2;part=1;" vertex="1" parent="class-api-ent0011">
+          <mxGeometry as="geometry" x="31.4036" y="9.9298" width="82.3677" height="22.95" />
+        </mxCell>
+        <mxCell id="c234" value="IChatService" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=3;part=1;" vertex="1" parent="class-api-ent0011">
+          <mxGeometry as="geometry" x="10.0" y="43.7188" width="125.1748" height="22.95" />
+        </mxCell>
+        <mxCell id="class-api-ent0012" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1717.5" y="2605.0" width="148.1558" height="77.5781" />
+        </mxCell>
+        <mxCell id="c236" value="«см. 4»" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=2;part=1;" vertex="1" parent="class-api-ent0012">
+          <mxGeometry as="geometry" x="34.894" y="9.9298" width="82.3677" height="22.95" />
+        </mxCell>
+        <mxCell id="c237" value="IFileUploader" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=3;part=1;" vertex="1" parent="class-api-ent0012">
+          <mxGeometry as="geometry" x="10.0" y="43.7188" width="132.1558" height="22.95" />
+        </mxCell>
+        <mxCell id="class-api-ent0013" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1092.5" y="2448.5" width="369.7617" height="77.5781" />
+        </mxCell>
+        <mxCell id="c239" value="«внешний»" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=2;part=1;" vertex="1" parent="class-api-ent0013">
+          <mxGeometry as="geometry" x="134.2087" y="9.9298" width="105.3442" height="22.95" />
+        </mxCell>
+        <mxCell id="c240" value="IHubContext&lt;ChatHub, IChatClient&gt;" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=3;part=1;" vertex="1" parent="class-api-ent0013">
+          <mxGeometry as="geometry" x="10.0" y="43.7188" width="353.7617" height="22.95" />
+        </mxCell>
+        <mxCell id="e241" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;endArrow=open;endFill=0;endSize=9;exitX=0.29469676630476077;exitY=0.9986922705734907;exitPerimeter=0;entryX=0.6748774155372276;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-api-ent0002" target="class-api-ent0003">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="910.2573" y="1956.2111" />
+            <mxPoint as="targetPoint" x="783.5238" y="2026.9111" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c242" value="/auth" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=15.0;fontColor=#202020;fontStyle=0;fontStyle=0;" vertex="1" parent="e241">
+          <mxGeometry as="geometry" x="0" y="0" width="43.1406" height="20.25" relative="1">
+            <mxPoint as="offset" x="39.609449999999924" y="-10.38779999999997" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e243" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;endArrow=open;endFill=0;endSize=9;exitX=0.5005609196978865;exitY=0.9984166504701459;exitPerimeter=0;entryX=0.5685538290481716;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-api-ent0002" target="class-api-ent0004">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1015.92" y="1956.1782" />
+            <mxPoint as="targetPoint" x="954.4907" y="2216.7016" />
+            <Array as="points">
+              <mxPoint x="1014.0104" y="1998.6587" />
+              <mxPoint x="1009.4549" y="2046.8144" />
+              <mxPoint x="1004.4657" y="2080.3239" />
+              <mxPoint x="997.5771" y="2113.7352" />
+              <mxPoint x="988.5" y="2146.0" />
+              <mxPoint x="979.8138" y="2169.1187" />
+              <mxPoint x="969.6007" y="2190.5141" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c244" value="/chats" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=15.0;fontColor=#202020;fontStyle=0;fontStyle=0;" vertex="1" parent="e243">
+          <mxGeometry as="geometry" x="0" y="0" width="49.6958" height="20.25" relative="1">
+            <mxPoint as="offset" x="19.2047417460484" y="-14.677740134562725" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e245" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;endArrow=open;endFill=0;endSize=9;exitX=0.6502360772483256;exitY=0.9980036391906654;exitPerimeter=0;entryX=0.37544512050079465;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-api-ent0002" target="class-api-ent0005">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1092.7429" y="1956.1289" />
+            <mxPoint as="targetPoint" x="1714.2823" y="2427.8902" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c246" value="/upload" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=15.0;fontColor=#202020;fontStyle=0;fontStyle=0;" vertex="1" parent="e245">
+          <mxGeometry as="geometry" x="0" y="0" width="60.1401" height="20.25" relative="1">
+            <mxPoint as="offset" x="17.98739999999998" y="-20.836250000000007" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e247" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;endArrow=open;endFill=0;endSize=9;exitX=0.42192957086296135;exitY=0.9986922705734907;exitPerimeter=0;entryX=0.7293278136918249;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-api-ent0003" target="class-api-ent0007">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="631.3438" y="2146.2111" />
+            <mxPoint as="targetPoint" x="558.1267" y="2237.3687" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c248" value="Identity API" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=15.0;fontColor=#202020;fontStyle=0;fontStyle=0;" vertex="1" parent="e247">
+          <mxGeometry as="geometry" x="0" y="0" width="89.9863" height="20.25" relative="1">
+            <mxPoint as="offset" x="31.76475000000005" y="-20.616600000000005" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e249" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;endArrow=open;endFill=0;endSize=9;exitX=0.003952886553136797;exitY=0.9981837556715747;exitPerimeter=0;entryX=0.5674288075132508;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-api-ent0004" target="class-api-ent0008">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="614.8777" y="2336.1504" />
+            <mxPoint as="targetPoint" x="529.0968" y="2448.2228999999998" />
+            <Array as="points">
+              <mxPoint x="597.019" y="2347.7072" />
+              <mxPoint x="581.1662" y="2360.1142" />
+              <mxPoint x="574.3808" y="2366.6464" />
+              <mxPoint x="562.3522" y="2380.739" />
+              <mxPoint x="552.2091" y="2395.8265" />
+              <mxPoint x="543.7464" y="2411.4577" />
+              <mxPoint x="536.7588000000001" y="2427.1816" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c250" value="список и история" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=15.0;fontColor=#202020;fontStyle=0;fontStyle=0;" vertex="1" parent="e249">
+          <mxGeometry as="geometry" x="0" y="0" width="141.7759" height="20.25" relative="1">
+            <mxPoint as="offset" x="36.878893714057654" y="-22.140556324044496" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e251" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;endArrow=open;endFill=0;endSize=9;exitX=0.5424840958534672;exitY=0.9992217292522568;exitPerimeter=0;entryX=0.38269861193357413;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-api-ent0004" target="class-api-ent0011">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="938.8095" y="2336.2743" />
+            <mxPoint as="targetPoint" x="987.0274" y="2448.2469" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c252" value="создание чата" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=15.0;fontColor=#202020;fontStyle=0;fontStyle=0;" vertex="1" parent="e251">
+          <mxGeometry as="geometry" x="0" y="0" width="118.4995" height="20.25" relative="1">
+            <mxPoint as="offset" x="7.581550000000107" y="-31.087300000000027" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e253" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;endArrow=open;endFill=0;endSize=9;exitX=0.7491118182945647;exitY=0.997580574898297;exitPerimeter=0;entryX=0.3778714777652745;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-api-ent0004" target="class-api-ent0013">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1063.0981000000002" y="2336.0784" />
+            <mxPoint as="targetPoint" x="1232.2224" y="2448.3905999999997" />
+            <Array as="points">
+              <mxPoint x="1097.5" y="2354.0" />
+              <mxPoint x="1121.5812" y="2368.2834000000003" />
+              <mxPoint x="1145.017" y="2383.3963" />
+              <mxPoint x="1189.002" y="2414.6062" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c254" value="уведомление второго участника" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=15.0;fontColor=#202020;fontStyle=0;fontStyle=0;" vertex="1" parent="e253">
+          <mxGeometry as="geometry" x="0" y="0" width="263.1821" height="20.25" relative="1">
+            <mxPoint as="offset" x="7.7269013431398434" y="-26.307256183521986" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e255" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;endArrow=open;endFill=0;endSize=9;exitX=0.008879988322717304;exitY=0.9975956544176289;exitPerimeter=0;entryX=1;entryY=0.022499275548023886;entryPerimeter=0;" edge="1" parent="1" source="class-api-ent0004" target="class-api-ent0006">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="617.8414" y="2336.0802" />
+            <mxPoint as="targetPoint" x="421.3124" y="2410.6259" />
+            <Array as="points">
+              <mxPoint x="560.5567" y="2352.4242" />
+              <mxPoint x="519.1766" y="2366.5128" />
+              <mxPoint x="491.608" y="2378.1298" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e256" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;endArrow=open;endFill=0;endSize=9;exitX=0.3348597146713153;exitY=0.997597329919777;exitPerimeter=0;entryX=0.7425780222603265;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-api-ent0004" target="class-api-ent0009">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="813.9214" y="2336.0804" />
+            <mxPoint as="targetPoint" x="689.3423" y="2448.3712" />
+            <Array as="points">
+              <mxPoint x="775.0447" y="2363.5117" />
+              <mxPoint x="737.4261" y="2394.1005" />
+              <mxPoint x="712.0615" y="2418.8086" />
+              <mxPoint x="702.2218" y="2430.555" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e257" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;endArrow=open;endFill=0;endSize=9;exitX=0.45833085346240415;exitY=0.9992217292522568;exitPerimeter=0;entryX=0.5906769069438447;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-api-ent0004" target="class-api-ent0010">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="888.1905" y="2336.2743" />
+            <mxPoint as="targetPoint" x="839.9726" y="2448.2469" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e258" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;endArrow=open;endFill=0;endSize=9;exitX=0.4997194811415041;exitY=0.9998609333217164;exitPerimeter=0;entryX=0.4994742021574586;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-api-ent0005" target="class-api-ent0012">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1791.5" y="2547.3505999999998" />
+            <mxPoint as="targetPoint" x="1791.5" y="2604.8477000000003" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c259" value="ApiMain объединяет маршруты под префиксом /api. Зависимости ChatEndpoint включают зависимости обработчиков.&#10;Маршрут истории требует входа, но не проверяет участие пользователя в чате." style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17;fontColor=#202020;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="64.0" y="2730.0" width="2072" height="72" />
+        </mxCell>
+        <mxCell id="c261" value="" style="rounded=0;fillColor=#FFFFFF;strokeColor=#B6BBC0;strokeWidth=1;locked=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="2200.0" y="1730.0" width="1380" height="1090" />
+        </mxCell>
+        <mxCell id="c262" value="4. Файлы и журнал запросов" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=25;fontColor=#202020;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="2224.0" y="1750.0" width="1332" height="42" />
+        </mxCell>
+        <mxCell id="class-files-logging-ent0002" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="2215.0" y="1847.0" width="473.271" height="119.3672" />
+        </mxCell>
+        <mxCell id="c264" value="" style="rounded=0;fillColor=#F3F4F5;strokeColor=none;part=1;" vertex="1" parent="class-files-logging-ent0002">
+          <mxGeometry as="geometry" x="1" y="1" width="471.271" height="76.5781" />
+        </mxCell>
+        <mxCell id="c265" value="«interface»" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=2;part=1;" vertex="1" parent="class-files-logging-ent0002">
+          <mxGeometry as="geometry" x="188.2336" y="9.9298" width="100.8037" height="22.95" />
+        </mxCell>
+        <mxCell id="c266" value="IFileUploader" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=3;part=1;" vertex="1" parent="class-files-logging-ent0002">
+          <mxGeometry as="geometry" x="172.5576" y="43.7188" width="132.1558" height="22.95" />
+        </mxCell>
+        <mxCell id="c267" value="+UploadFileToRemote(file: IFormFile): Task&lt;string&gt;" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-files-logging-ent0002">
+          <mxGeometry as="geometry" x="13.0" y="86.5079" width="451.271" height="22.95" />
+        </mxCell>
+        <mxCell id="e268" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;strokeWidth=0.8;part=1;selectable=0;" edge="1" parent="class-files-logging-ent0002">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1.0" y="77.5781" />
+            <mxPoint as="targetPoint" x="472.271" y="77.5781" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="class-files-logging-ent0003" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="2397.5" y="2024.0" width="550.2524" height="119.3672" />
+        </mxCell>
+        <mxCell id="c270" value="" style="rounded=0;fillColor=#F3F4F5;strokeColor=none;part=1;" vertex="1" parent="class-files-logging-ent0003">
+          <mxGeometry as="geometry" x="1" y="1" width="548.2524" height="42.7891" />
+        </mxCell>
+        <mxCell id="c271" value="FileUploaderService" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=1;part=1;" vertex="1" parent="class-files-logging-ent0003">
+          <mxGeometry as="geometry" x="178.8745" y="9.9298" width="196.5034" height="22.95" />
+        </mxCell>
+        <mxCell id="c272" value="+FileUploaderService(logger: ILogger&lt;FileUploaderService&gt;)" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-files-logging-ent0003">
+          <mxGeometry as="geometry" x="13.0" y="52.7188" width="528.2524" height="22.95" />
+        </mxCell>
+        <mxCell id="c273" value="+UploadFileToRemote(file: IFormFile): Task&lt;string&gt;" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-files-logging-ent0003">
+          <mxGeometry as="geometry" x="13.0" y="86.5079" width="451.271" height="22.95" />
+        </mxCell>
+        <mxCell id="e274" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;strokeWidth=0.8;part=1;selectable=0;" edge="1" parent="class-files-logging-ent0003">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1.0" y="43.78909999999999" />
+            <mxPoint as="targetPoint" x="549.2524" y="43.78909999999999" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="class-files-logging-ent0004" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="2515.5" y="2235.0" width="314.0801" height="77.5781" />
+        </mxCell>
+        <mxCell id="c276" value="«внешний»" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=2;part=1;" vertex="1" parent="class-files-logging-ent0004">
+          <mxGeometry as="geometry" x="106.3679" y="9.9298" width="105.3442" height="22.95" />
+        </mxCell>
+        <mxCell id="c277" value="ILogger&lt;FileUploaderService&gt;" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=3;part=1;" vertex="1" parent="class-files-logging-ent0004">
+          <mxGeometry as="geometry" x="10.0" y="43.7188" width="298.0801" height="22.95" />
+        </mxCell>
+        <mxCell id="class-files-logging-ent0005" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="2346.0" y="2235.0" width="117.3442" height="77.5781" />
+        </mxCell>
+        <mxCell id="c279" value="«внешний»" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=2;part=1;" vertex="1" parent="class-files-logging-ent0005">
+          <mxGeometry as="geometry" x="8.0" y="9.9298" width="105.3442" height="22.95" />
+        </mxCell>
+        <mxCell id="c280" value="IFormFile" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=3;part=1;" vertex="1" parent="class-files-logging-ent0005">
+          <mxGeometry as="geometry" x="13.4163" y="43.7188" width="94.5117" height="22.95" />
+        </mxCell>
+        <mxCell id="class-files-logging-ent0006" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="2966.0" y="1847.0" width="597.4507" height="119.3672" />
+        </mxCell>
+        <mxCell id="c282" value="" style="rounded=0;fillColor=#F3F4F5;strokeColor=none;part=1;" vertex="1" parent="class-files-logging-ent0006">
+          <mxGeometry as="geometry" x="1" y="1" width="595.4507" height="76.5781" />
+        </mxCell>
+        <mxCell id="c283" value="«внешний»" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=2;part=1;" vertex="1" parent="class-files-logging-ent0006">
+          <mxGeometry as="geometry" x="248.0532" y="9.9298" width="105.3442" height="22.95" />
+        </mxCell>
+        <mxCell id="c284" value="IMiddleware" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=3;part=1;" vertex="1" parent="class-files-logging-ent0006">
+          <mxGeometry as="geometry" x="239.7981" y="43.7188" width="121.8545" height="22.95" />
+        </mxCell>
+        <mxCell id="c285" value="+InvokeAsync(context: HttpContext, next: RequestDelegate): Task" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-files-logging-ent0006">
+          <mxGeometry as="geometry" x="13.0" y="86.5079" width="575.4507" height="22.95" />
+        </mxCell>
+        <mxCell id="e286" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;strokeWidth=0.8;part=1;selectable=0;" edge="1" parent="class-files-logging-ent0006">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1.0" y="77.5781" />
+            <mxPoint as="targetPoint" x="596.4507000000001" y="77.5781" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="class-files-logging-ent0007" value="" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#454545;strokeWidth=1.2;container=1;recursiveResize=0;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="2966.0" y="2003.0" width="597.4507" height="161.1563" />
+        </mxCell>
+        <mxCell id="c288" value="" style="rounded=0;fillColor=#F3F4F5;strokeColor=none;part=1;" vertex="1" parent="class-files-logging-ent0007">
+          <mxGeometry as="geometry" x="1" y="1" width="595.4507" height="42.7891" />
+        </mxCell>
+        <mxCell id="c289" value="LogMiddlewareService" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=1;part=1;" vertex="1" parent="class-files-logging-ent0007">
+          <mxGeometry as="geometry" x="190.2839" y="9.9298" width="220.8828" height="22.95" />
+        </mxCell>
+        <mxCell id="c290" value="-FileLock: SemaphoreSlim {readOnly}" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=4;part=1;" vertex="1" parent="class-files-logging-ent0007">
+          <mxGeometry as="geometry" x="13.0" y="52.7188" width="329.0835" height="22.95" />
+        </mxCell>
+        <mxCell id="c291" value="+LogMiddlewareService()" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-files-logging-ent0007">
+          <mxGeometry as="geometry" x="13.0" y="94.5079" width="222.9248" height="22.95" />
+        </mxCell>
+        <mxCell id="c292" value="+InvokeAsync(context: HttpContext, next: RequestDelegate): Task" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17.0;fontColor=#202020;fontStyle=0;fontStyle=0;part=1;" vertex="1" parent="class-files-logging-ent0007">
+          <mxGeometry as="geometry" x="13.0" y="128.297" width="575.4507" height="22.95" />
+        </mxCell>
+        <mxCell id="e293" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;strokeWidth=0.8;part=1;selectable=0;" edge="1" parent="class-files-logging-ent0007">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1.0" y="43.78909999999999" />
+            <mxPoint as="targetPoint" x="596.4507000000001" y="43.78909999999999" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e294" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;strokeWidth=0.8;part=1;selectable=0;" edge="1" parent="class-files-logging-ent0007">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1.0" y="85.5781" />
+            <mxPoint as="targetPoint" x="596.4507000000001" y="85.5781" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e295" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;startArrow=block;startFill=0;startSize=16;exitX=0.6558548907496974;exitY=0.9970561427259751;exitPerimeter=0;entryX=0.3649161730144203;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-files-logging-ent0002" target="class-files-logging-ent0003">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="2525.3971" y="1966.0158000000001" />
+            <mxPoint as="targetPoint" x="2598.296" y="2023.7412" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e296" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;endArrow=open;endFill=0;endSize=9;exitX=0.49977065070502197;exitY=0.9978394399801622;exitPerimeter=0;entryX=0.49987248475786905;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-files-logging-ent0003" target="class-files-logging-ent0004">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="2672.5" y="2143.1093" />
+            <mxPoint as="targetPoint" x="2672.5" y="2234.9482" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c297" value="журнал загрузки" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=15.0;fontColor=#202020;fontStyle=0;fontStyle=0;" vertex="1" parent="e296">
+          <mxGeometry as="geometry" x="0" y="0" width="139.498" height="20.25" relative="1">
+            <mxPoint as="offset" x="9.0" y="0.14454999999998108" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e298" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;endArrow=open;endFill=0;endSize=9;exitX=0.288149038513962;exitY=0.9974180511899419;exitPerimeter=0;entryX=0.7896896480610035;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-files-logging-ent0003" target="class-files-logging-ent0005">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="2556.0547" y="2143.059" />
+            <mxPoint as="targetPoint" x="2438.6655" y="2234.6886" />
+            <Array as="points">
+              <mxPoint x="2520.532" y="2165.1017" />
+              <mxPoint x="2491.4148" y="2185.8755" />
+              <mxPoint x="2463.7383" y="2209.5261" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c299" value="содержимое файла" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=15.0;fontColor=#202020;fontStyle=0;fontStyle=0;" vertex="1" parent="e298">
+          <mxGeometry as="geometry" x="0" y="0" width="158.8413" height="20.25" relative="1">
+            <mxPoint as="offset" x="11.786649865802985" y="4.937731311809102" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e300" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;endArrow=open;endFill=0;endSize=9;exitX=0.4020664693167339;exitY=0.9987592906594106;exitPerimeter=0;entryX=0.4103364290693532;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-files-logging-ent0002" target="class-files-logging-ent0005">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="2405.2864" y="1966.2191" />
+            <mxPoint as="targetPoint" x="2394.1506" y="2234.9259" />
+            <Array as="points">
+              <mxPoint x="2397.1848" y="1981.1479" />
+              <mxPoint x="2391.7525" y="1993.5481" />
+              <mxPoint x="2388.5" y="2003.0" />
+              <mxPoint x="2383.309" y="2023.2033000000001" />
+              <mxPoint x="2379.6176" y="2043.7744" />
+              <mxPoint x="2377.2785" y="2064.5288" />
+              <mxPoint x="2376.1443" y="2085.2816000000003" />
+              <mxPoint x="2376.901" y="2126.0442" />
+              <mxPoint x="2380.7088" y="2164.5845" />
+              <mxPoint x="2386.3886" y="2199.4253" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e301" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=7 7;startArrow=block;startFill=0;startSize=16;exitX=0.49962281406649955;exitY=0.9990960665911574;exitPerimeter=0;entryX=0.49962281406649955;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="class-files-logging-ent0006" target="class-files-logging-ent0007">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="3264.5" y="1966.2593" />
+            <mxPoint as="targetPoint" x="3264.5" y="2002.7514999999999" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c302" value="FileUploaderService записывает файл в wwwroot/uploads и возвращает относительную ссылку.&#10;UploadFileToRemote сохраняет файл на локальный диск сервера.&#10;&#10;LogMiddlewareService дописывает завершившиеся запросы в ежедневный журнал.&#10;Если следующий обработчик выбрасывает исключение, запись о запросе не создаётся.&#10;FileLock ограничивает одновременную запись в журнал внутри процесса." style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17;fontColor=#202020;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="2224.0" y="2380.0" width="1332" height="180" />
+        </mxCell>
+        <mxCell id="c303" value="Обозначения связей" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=21;fontColor=#202020;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="2224.0" y="2585.0" width="1332" height="35" />
+        </mxCell>
+        <mxCell id="e304" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;endArrow=block;endFill=0;endSize=16;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="2224.0" y="2640.0" />
+            <mxPoint as="targetPoint" x="2340.0" y="2640.0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c305" value="Наследование" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17;fontColor=#202020;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="2365.0" y="2624.0" width="1180" height="32" />
+        </mxCell>
+        <mxCell id="e306" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;endArrow=block;endFill=0;endSize=16;dashed=1;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="2224.0" y="2680.0" />
+            <mxPoint as="targetPoint" x="2340.0" y="2680.0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c307" value="Реализация интерфейса" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17;fontColor=#202020;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="2365.0" y="2664.0" width="1180" height="32" />
+        </mxCell>
+        <mxCell id="e308" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;endArrow=open;endSize=9;dashed=1;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="2224.0" y="2720.0" />
+            <mxPoint as="targetPoint" x="2340.0" y="2720.0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c309" value="Зависимость" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17;fontColor=#202020;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="2365.0" y="2704.0" width="1180" height="32" />
+        </mxCell>
+        <mxCell id="c310" value="Сплошная линия без треугольника обозначает связь сущностей. Числа у концов задают кратность. «см. 1», «см. 2» и «см. 4» отсылают к разделам этой диаграммы." style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17;fontColor=#202020;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="45" y="2834" width="3480" height="40" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

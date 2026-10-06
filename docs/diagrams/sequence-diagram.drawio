@@ -1,0 +1,304 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile>
+  <diagram id="sequence-diagram" name="Отправка сообщения в чат">
+    <mxGraphModel grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1840" pageHeight="2240" math="0" shadow="0" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c1" value="ThatChat. Отправка сообщения в чат" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=32;fontColor=#202020;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="28" width="1740" height="46" />
+        </mxCell>
+        <mxCell id="c2" value="Диаграмма последовательности" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=22;fontColor=#202020;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="88" width="1740" height="32" />
+        </mxCell>
+        <mxCell id="c3" value="Пользователь вошёл. Получатели подключены к группе через JoinChat. ChatHub обращается к ChatService через IChatService.&#10;Операции с DbSet показаны на линии AppDbContext." style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="136" width="1740" height="64" />
+        </mxCell>
+        <mxCell id="participant-sender-group" value="" style="group;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="213" width="220" height="1927" />
+        </mxCell>
+        <mxCell id="participant-sender" value="Клиент-отправитель" style="shape=umlActor;html=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;fontFamily=Arial;fontSize=18;strokeColor=#404040;fillColor=#FFFFFF;" vertex="1" parent="participant-sender-group">
+          <mxGeometry as="geometry" x="90" y="0" width="40" height="52" />
+        </mxCell>
+        <mxCell id="lifeline-sender" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=5 5;strokeColor=#A1A1A1;strokeWidth=1;" edge="1" parent="participant-sender-group">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="110" y="92" />
+            <mxPoint as="targetPoint" x="110" y="1927" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="participant-hub-group" value="" style="group;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="460" y="213" width="220" height="1927" />
+        </mxCell>
+        <mxCell id="participant-hub" value="ChatHub" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;strokeColor=#404040;fillColor=#F3F4F5;" vertex="1" parent="participant-hub-group">
+          <mxGeometry as="geometry" x="0" y="5" width="220" height="64" />
+        </mxCell>
+        <mxCell id="lifeline-hub" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=5 5;strokeColor=#A1A1A1;strokeWidth=1;" edge="1" parent="participant-hub-group">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="110" y="92" />
+            <mxPoint as="targetPoint" x="110" y="1927" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="participant-service-group" value="" style="group;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="910" y="213" width="220" height="1927" />
+        </mxCell>
+        <mxCell id="participant-service" value="ChatService" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;strokeColor=#404040;fillColor=#F3F4F5;" vertex="1" parent="participant-service-group">
+          <mxGeometry as="geometry" x="0" y="5" width="220" height="64" />
+        </mxCell>
+        <mxCell id="lifeline-service" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=5 5;strokeColor=#A1A1A1;strokeWidth=1;" edge="1" parent="participant-service-group">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="110" y="92" />
+            <mxPoint as="targetPoint" x="110" y="1927" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="participant-db-group" value="" style="group;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1360" y="213" width="220" height="1927" />
+        </mxCell>
+        <mxCell id="participant-db" value="AppDbContext" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;strokeColor=#404040;fillColor=#F3F4F5;" vertex="1" parent="participant-db-group">
+          <mxGeometry as="geometry" x="0" y="5" width="220" height="64" />
+        </mxCell>
+        <mxCell id="lifeline-db" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=5 5;strokeColor=#A1A1A1;strokeWidth=1;" edge="1" parent="participant-db-group">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="110" y="92" />
+            <mxPoint as="targetPoint" x="110" y="1927" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="participant-clients-group" value="" style="group;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1650" y="213" width="220" height="1927" />
+        </mxCell>
+        <mxCell id="participant-clients" value="IChatClient&#10;Получатели" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;strokeColor=#404040;fillColor=#F3F4F5;" vertex="1" parent="participant-clients-group">
+          <mxGeometry as="geometry" x="0" y="5" width="220" height="64" />
+        </mxCell>
+        <mxCell id="lifeline-clients" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;dashed=1;dashPattern=5 5;strokeColor=#A1A1A1;strokeWidth=1;" edge="1" parent="participant-clients-group">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="110" y="92" />
+            <mxPoint as="targetPoint" x="110" y="1927" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="activation-hub" value="" style="rounded=0;fillColor=#FFFFFF;strokeColor=#404040;strokeWidth=1;" vertex="1" parent="participant-hub-group">
+          <mxGeometry as="geometry" x="104" y="137" width="12" height="1760" />
+        </mxCell>
+        <mxCell id="activation-service" value="" style="rounded=0;fillColor=#FFFFFF;strokeColor=#404040;strokeWidth=1;" vertex="1" parent="participant-service-group">
+          <mxGeometry as="geometry" x="104" y="447" width="12" height="1260" />
+        </mxCell>
+        <mxCell id="activation-db-access" value="" style="rounded=0;fillColor=#FFFFFF;strokeColor=#404040;strokeWidth=1;" vertex="1" parent="participant-db-group">
+          <mxGeometry as="geometry" x="104" y="877" width="12" height="60" />
+        </mxCell>
+        <mxCell id="activation-db-save" value="" style="rounded=0;fillColor=#FFFFFF;strokeColor=#404040;strokeWidth=1;" vertex="1" parent="participant-db-group">
+          <mxGeometry as="geometry" x="104" y="1247" width="12" height="325" />
+        </mxCell>
+        <mxCell id="activation-clients" value="" style="rounded=0;fillColor=#FFFFFF;strokeColor=#404040;strokeWidth=1;" vertex="1" parent="participant-clients-group">
+          <mxGeometry as="geometry" x="104" y="1777" width="12" height="60" />
+        </mxCell>
+        <mxCell id="message-sender-hub-350" value="SendMessage(chatId, message, fileUrl)" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;exitX=0.5;exitY=0.07109496626881162;exitPerimeter=0;entryX=0.4727272727272727;entryY=0.07109496626881162;entryPerimeter=0;endArrow=open;endSize=9;align=center;verticalAlign=bottom;labelBackgroundColor=#FFFFFF;spacingBottom=8;" edge="1" parent="1" source="participant-sender-group" target="participant-hub-group">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="170" y="350" />
+            <mxPoint as="targetPoint" x="564" y="350" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="self-hub-400" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;endArrow=open;endSize=9;exitX=0.5272727272727272;exitY=0.09704203425012974;exitPerimeter=0;entryX=0.5272727272727272;entryY=0.1126102750389206;entryPerimeter=0;" edge="1" parent="1" source="participant-hub-group" target="participant-hub-group">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="576" y="400" />
+            <mxPoint as="targetPoint" x="576" y="430" />
+            <Array as="points">
+              <mxPoint x="626" y="400" />
+              <mxPoint x="626" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c26" value="FindFirstValue(NameIdentifier)&#10;Guid.TryParse(userIdStr)" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17;fontColor=#202020;fontStyle=0;verticalAlign=top;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="641" y="393" width="360" height="70" />
+        </mxCell>
+        <mxCell id="guard-490" value="" style="rounded=0;fillColor=none;strokeColor=#777777;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="55" y="490" width="1100" height="110" />
+        </mxCell>
+        <mxCell id="c28" value="break" style="shape=umlFrame;html=0;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=12;spacingTop=9;fontFamily=Arial;fontSize=18;fontStyle=1;strokeColor=#777777;fillColor=#FFFFFF;width=95;height=36;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="55" y="490" width="1100" height="110" />
+        </mxCell>
+        <mxCell id="c29" value="[нет userId&#10;или неверный формат]" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17;fontColor=#202020;fontStyle=1;verticalAlign=top;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="195" y="500" width="345" height="50" />
+        </mxCell>
+        <mxCell id="message-hub-sender-575" value="завершение без сохранения и рассылки" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;exitX=0.4727272727272727;exitY=0.18785677218474311;exitPerimeter=0;entryX=0.5;entryY=0.18785677218474311;entryPerimeter=0;endArrow=open;endSize=9;dashed=1;dashPattern=5 5;align=center;verticalAlign=bottom;labelBackgroundColor=#FFFFFF;spacingBottom=8;" edge="1" parent="1" source="participant-hub-group" target="participant-sender-group">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="564" y="575" />
+            <mxPoint as="targetPoint" x="170" y="575" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="message-hub-service-660" value="SaveMessageAsync(userId, chatId,&#10;message, fileUrl)" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;exitX=0.5272727272727272;exitY=0.2319667877529839;exitPerimeter=0;entryX=0.4727272727272727;entryY=0.2319667877529839;entryPerimeter=0;endArrow=open;endSize=9;align=center;verticalAlign=bottom;labelBackgroundColor=#FFFFFF;spacingBottom=8;" edge="1" parent="1" source="participant-hub-group" target="participant-service-group">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="576" y="660" />
+            <mxPoint as="targetPoint" x="1014" y="660" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="self-service-710" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;endArrow=open;endSize=9;exitX=0.5272727272727272;exitY=0.25791385573430203;exitPerimeter=0;entryX=0.5272727272727272;entryY=0.2734820965230929;entryPerimeter=0;" edge="1" parent="1" source="participant-service-group" target="participant-service-group">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1026" y="710" />
+            <mxPoint as="targetPoint" x="1026" y="740" />
+            <Array as="points">
+              <mxPoint x="1076" y="710" />
+              <mxPoint x="1076" y="740" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c33" value="string.IsNullOrWhiteSpace(message)&#10;string.IsNullOrWhiteSpace(fileUrl)&#10;message.Length &gt; 10 000" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17;fontColor=#202020;fontStyle=0;verticalAlign=top;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1091" y="703" width="360" height="70" />
+        </mxCell>
+        <mxCell id="guard-805" value="" style="rounded=0;fillColor=none;strokeColor=#777777;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="55" y="805" width="1100" height="160" />
+        </mxCell>
+        <mxCell id="c35" value="break" style="shape=umlFrame;html=0;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=12;spacingTop=9;fontFamily=Arial;fontSize=18;fontStyle=1;strokeColor=#777777;fillColor=#FFFFFF;width=95;height=36;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="55" y="805" width="1100" height="160" />
+        </mxCell>
+        <mxCell id="c36" value="[нет текста и ссылки&#10;или длина текста &gt; 10 000]" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17;fontColor=#202020;fontStyle=1;verticalAlign=top;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="195" y="815" width="345" height="50" />
+        </mxCell>
+        <mxCell id="message-service-hub-900" value="null" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;exitX=0.4727272727272727;exitY=0.35651271406331086;exitPerimeter=0;entryX=0.5272727272727272;entryY=0.35651271406331086;entryPerimeter=0;endArrow=open;endSize=9;dashed=1;dashPattern=5 5;align=center;verticalAlign=bottom;labelBackgroundColor=#FFFFFF;spacingBottom=8;" edge="1" parent="1" source="participant-service-group" target="participant-hub-group">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1014" y="900" />
+            <mxPoint as="targetPoint" x="576" y="900" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="message-hub-sender-950" value="завершение без рассылки" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;exitX=0.4727272727272727;exitY=0.38245978204462894;exitPerimeter=0;entryX=0.5;entryY=0.38245978204462894;entryPerimeter=0;endArrow=open;endSize=9;dashed=1;dashPattern=5 5;align=center;verticalAlign=bottom;labelBackgroundColor=#FFFFFF;spacingBottom=8;" edge="1" parent="1" source="participant-hub-group" target="participant-sender-group">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="564" y="950" />
+            <mxPoint as="targetPoint" x="170" y="950" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="self-service-990" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;endArrow=open;endSize=9;exitX=0.5272727272727272;exitY=0.40321743642968344;exitPerimeter=0;entryX=0.5272727272727272;entryY=0.4187856772184743;entryPerimeter=0;" edge="1" parent="1" source="participant-service-group" target="participant-service-group">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1026" y="990" />
+            <mxPoint as="targetPoint" x="1026" y="1020" />
+            <Array as="points">
+              <mxPoint x="1076" y="990" />
+              <mxPoint x="1076" y="1020" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c40" value="HasAccessToChatAsync(userId,&#10;chatId)" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17;fontColor=#202020;fontStyle=0;verticalAlign=top;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1091" y="983" width="360" height="70" />
+        </mxCell>
+        <mxCell id="message-service-db-1090" value="Chats.AnyAsync(чат существует&#10;и доступен)" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;exitX=0.5272727272727272;exitY=0.45511157239231964;exitPerimeter=0;entryX=0.4727272727272727;entryY=0.45511157239231964;entryPerimeter=0;endArrow=open;endSize=9;align=center;verticalAlign=bottom;labelBackgroundColor=#FFFFFF;spacingBottom=8;" edge="1" parent="1" source="participant-service-group" target="participant-db-group">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1026" y="1090" />
+            <mxPoint as="targetPoint" x="1464" y="1090" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="message-db-service-1150" value="hasAccess: bool" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;exitX=0.4727272727272727;exitY=0.4862480539699014;exitPerimeter=0;entryX=0.5272727272727272;entryY=0.4862480539699014;entryPerimeter=0;endArrow=open;endSize=9;dashed=1;dashPattern=5 5;align=center;verticalAlign=bottom;labelBackgroundColor=#FFFFFF;spacingBottom=8;" edge="1" parent="1" source="participant-db-group" target="participant-service-group">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1464" y="1150" />
+            <mxPoint as="targetPoint" x="1026" y="1150" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="guard-1195" value="" style="rounded=0;fillColor=none;strokeColor=#777777;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="55" y="1195" width="1100" height="150" />
+        </mxCell>
+        <mxCell id="c44" value="break" style="shape=umlFrame;html=0;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=12;spacingTop=9;fontFamily=Arial;fontSize=18;fontStyle=1;strokeColor=#777777;fillColor=#FFFFFF;width=95;height=36;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="55" y="1195" width="1100" height="150" />
+        </mxCell>
+        <mxCell id="c45" value="[hasAccess == false]" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17;fontColor=#202020;fontStyle=1;verticalAlign=top;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="195" y="1205" width="345" height="50" />
+        </mxCell>
+        <mxCell id="message-service-hub-1280" value="null" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;exitX=0.4727272727272727;exitY=0.5537104307213285;exitPerimeter=0;entryX=0.5272727272727272;entryY=0.5537104307213285;entryPerimeter=0;endArrow=open;endSize=9;dashed=1;dashPattern=5 5;align=center;verticalAlign=bottom;labelBackgroundColor=#FFFFFF;spacingBottom=8;" edge="1" parent="1" source="participant-service-group" target="participant-hub-group">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1014" y="1280" />
+            <mxPoint as="targetPoint" x="576" y="1280" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="message-hub-sender-1325" value="завершение без рассылки" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;exitX=0.4727272727272727;exitY=0.5770627919045148;exitPerimeter=0;entryX=0.5;entryY=0.5770627919045148;entryPerimeter=0;endArrow=open;endSize=9;dashed=1;dashPattern=5 5;align=center;verticalAlign=bottom;labelBackgroundColor=#FFFFFF;spacingBottom=8;" edge="1" parent="1" source="participant-hub-group" target="participant-sender-group">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="564" y="1325" />
+            <mxPoint as="targetPoint" x="170" y="1325" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="self-service-1380" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;endArrow=open;endSize=9;exitX=0.5272727272727272;exitY=0.6056045666839647;exitPerimeter=0;entryX=0.5272727272727272;entryY=0.6211728074727556;entryPerimeter=0;" edge="1" parent="1" source="participant-service-group" target="participant-service-group">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1026" y="1380" />
+            <mxPoint as="targetPoint" x="1026" y="1410" />
+            <Array as="points">
+              <mxPoint x="1076" y="1380" />
+              <mxPoint x="1076" y="1410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c49" value="new MessageEnt(...)" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17;fontColor=#202020;fontStyle=0;verticalAlign=top;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1091" y="1373" width="360" height="70" />
+        </mxCell>
+        <mxCell id="message-service-db-1460" value="Messages.Add(msgEnt)" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;exitX=0.5272727272727272;exitY=0.6471198754540737;exitPerimeter=0;entryX=0.4727272727272727;entryY=0.6471198754540737;entryPerimeter=0;endArrow=open;endSize=9;align=center;verticalAlign=bottom;labelBackgroundColor=#FFFFFF;spacingBottom=8;" edge="1" parent="1" source="participant-service-group" target="participant-db-group">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1026" y="1460" />
+            <mxPoint as="targetPoint" x="1464" y="1460" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="message-db-service-1520" value="EntityEntry&lt;MessageEnt&gt;" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;exitX=0.4727272727272727;exitY=0.6782563570316554;exitPerimeter=0;entryX=0.5272727272727272;entryY=0.6782563570316554;entryPerimeter=0;endArrow=open;endSize=9;dashed=1;dashPattern=5 5;align=center;verticalAlign=bottom;labelBackgroundColor=#FFFFFF;spacingBottom=8;" edge="1" parent="1" source="participant-db-group" target="participant-service-group">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1464" y="1520" />
+            <mxPoint as="targetPoint" x="1026" y="1520" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="message-service-db-1590" value="SaveChangesAsync()" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;exitX=0.5272727272727272;exitY=0.7145822522055008;exitPerimeter=0;entryX=0.4727272727272727;entryY=0.7145822522055008;entryPerimeter=0;endArrow=open;endSize=9;align=center;verticalAlign=bottom;labelBackgroundColor=#FFFFFF;spacingBottom=8;" edge="1" parent="1" source="participant-service-group" target="participant-db-group">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1026" y="1590" />
+            <mxPoint as="targetPoint" x="1464" y="1590" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="message-db-service-1650" value="число сохранённых записей" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;exitX=0.4727272727272727;exitY=0.7457187337830825;exitPerimeter=0;entryX=0.5272727272727272;entryY=0.7457187337830825;entryPerimeter=0;endArrow=open;endSize=9;dashed=1;dashPattern=5 5;align=center;verticalAlign=bottom;labelBackgroundColor=#FFFFFF;spacingBottom=8;" edge="1" parent="1" source="participant-db-group" target="participant-service-group">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1464" y="1650" />
+            <mxPoint as="targetPoint" x="1026" y="1650" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="message-service-db-1720" value="Users.Where(...).Select(Email)&#10;.FirstOrDefaultAsync()" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;exitX=0.5272727272727272;exitY=0.7820446289569278;exitPerimeter=0;entryX=0.4727272727272727;entryY=0.7820446289569278;entryPerimeter=0;endArrow=open;endSize=9;align=center;verticalAlign=bottom;labelBackgroundColor=#FFFFFF;spacingBottom=8;" edge="1" parent="1" source="participant-service-group" target="participant-db-group">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1026" y="1720" />
+            <mxPoint as="targetPoint" x="1464" y="1720" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="message-db-service-1785" value="senderEmail: string?" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;exitX=0.4727272727272727;exitY=0.8157758173326414;exitPerimeter=0;entryX=0.5272727272727272;entryY=0.8157758173326414;entryPerimeter=0;endArrow=open;endSize=9;dashed=1;dashPattern=5 5;align=center;verticalAlign=bottom;labelBackgroundColor=#FFFFFF;spacingBottom=8;" edge="1" parent="1" source="participant-db-group" target="participant-service-group">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1464" y="1785" />
+            <mxPoint as="targetPoint" x="1026" y="1785" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="self-service-1840" value="" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;endArrow=open;endSize=9;exitX=0.5272727272727272;exitY=0.8443175921120913;exitPerimeter=0;entryX=0.5272727272727272;entryY=0.8598858329008822;entryPerimeter=0;" edge="1" parent="1" source="participant-service-group" target="participant-service-group">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1026" y="1840" />
+            <mxPoint as="targetPoint" x="1026" y="1870" />
+            <Array as="points">
+              <mxPoint x="1076" y="1840" />
+              <mxPoint x="1076" y="1870" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c57" value="new ChatMessageDto(...)" style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17;fontColor=#202020;fontStyle=0;verticalAlign=top;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1091" y="1833" width="360" height="70" />
+        </mxCell>
+        <mxCell id="message-service-hub-1920" value="dto: ChatMessageDto" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;exitX=0.4727272727272727;exitY=0.8858329008822003;exitPerimeter=0;entryX=0.5272727272727272;entryY=0.8858329008822003;entryPerimeter=0;endArrow=open;endSize=9;dashed=1;dashPattern=5 5;align=center;verticalAlign=bottom;labelBackgroundColor=#FFFFFF;spacingBottom=8;" edge="1" parent="1" source="participant-service-group" target="participant-hub-group">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1014" y="1920" />
+            <mxPoint as="targetPoint" x="576" y="1920" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="message-hub-clients-1990" value="Clients.Group(chatId.ToString()).ReceiveChatMessage(dto)" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;exitX=0.5272727272727272;exitY=0.9221587960560457;exitPerimeter=0;entryX=0.4727272727272727;entryY=0.9221587960560457;entryPerimeter=0;endArrow=open;endSize=9;align=center;verticalAlign=bottom;labelBackgroundColor=#FFFFFF;spacingBottom=8;" edge="1" parent="1" source="participant-hub-group" target="participant-clients-group">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="576" y="1990" />
+            <mxPoint as="targetPoint" x="1754" y="1990" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="message-clients-hub-2050" value="завершение отправки SignalR" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;exitX=0.4727272727272727;exitY=0.9532952776336274;exitPerimeter=0;entryX=0.5272727272727272;entryY=0.9532952776336274;entryPerimeter=0;endArrow=open;endSize=9;dashed=1;dashPattern=5 5;align=center;verticalAlign=bottom;labelBackgroundColor=#FFFFFF;spacingBottom=8;" edge="1" parent="1" source="participant-clients-group" target="participant-hub-group">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1754" y="2050" />
+            <mxPoint as="targetPoint" x="576" y="2050" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="message-hub-sender-2110" value="завершение вызова SendMessage" style="edgeStyle=none;rounded=0;html=0;fontFamily=Arial;fontSize=17;fontColor=#202020;strokeColor=#404040;strokeWidth=1.2;endArrow=none;exitX=0.4727272727272727;exitY=0.9844317592112092;exitPerimeter=0;entryX=0.5;entryY=0.9844317592112092;entryPerimeter=0;endArrow=open;endSize=9;dashed=1;dashPattern=5 5;align=center;verticalAlign=bottom;labelBackgroundColor=#FFFFFF;spacingBottom=8;" edge="1" parent="1" source="participant-hub-group" target="participant-sender-group">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="564" y="2110" />
+            <mxPoint as="targetPoint" x="170" y="2110" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c62" value="Фрагмент break завершает сценарий при выполнении условия. Пустыми считаются также строки из пробельных символов.&#10;Пунктирные стрелки показывают результаты и завершение задач. Отправка SignalR не подтверждает прочтение сообщения.&#10;Исключение при рассылке не отменяет запись в базе данных." style="text;html=0;whiteSpace=wrap;overflow=visible;align=left;verticalAlign=middle;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=17;fontColor=#202020;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="2170" width="1750" height="95" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
